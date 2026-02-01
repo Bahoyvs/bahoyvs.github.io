@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a192f"/>
+      <stop offset="100%" style="stop-color:#112240"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1d3461"/>
+      <stop offset="50%" style="stop-color:#2d4a7c"/>
+      <stop offset="100%" style="stop-color:#1d3461"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a192f"/>
+      <stop offset="100%" style="stop-color:#1d3461"/>
+    </linearGradient>
+    <linearGradient id="truckGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#64ffda"/>
+      <stop offset="100%" style="stop-color:#00BFFF"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky Background -->
+  <rect width="800" height="300" fill="url(#skyGrad)"/>
+  
+  <!-- Curved Horizon -->
+  <ellipse cx="400" cy="600" rx="600" ry="350" fill="url(#bgGrad)"/>
+  
+  <!-- Road (Curved World Effect) -->
+  <path d="M300,500 Q400,200 500,500" fill="url(#roadGrad)" stroke="#64ffda" stroke-width="1" opacity="0.5"/>
+  <path d="M200,500 Q400,150 600,500" fill="none" stroke="#64ffda" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Road Lines -->
+  <g stroke="#ffcc00" stroke-width="3" stroke-dasharray="20,15">
+    <path d="M380,450 Q400,280 420,450" fill="none"/>
+  </g>
+  
+  <!-- Speed Lines -->
+  <g stroke="#64ffda" stroke-width="2" opacity="0.4">
+    <line x1="100" y1="350" x2="200" y2="400"/>
+    <line x1="150" y1="320" x2="250" y2="380"/>
+    <line x1="600" y1="400" x2="700" y2="350"/>
+    <line x1="550" y1="380" x2="650" y2="320"/>
+  </g>
+  
+  <!-- Truck -->
+  <g transform="translate(330, 280)">
+    <!-- Truck Body -->
+    <rect x="0" y="20" width="140" height="70" rx="5" fill="url(#truckGrad)"/>
+    <rect x="100" y="0" width="50" height="90" rx="5" fill="#00BFFF"/>
+    
+    <!-- Truck Details -->
+    <rect x="110" y="10" width="30" height="25" rx="3" fill="#0a192f" opacity="0.5"/>
+    <rect x="10" y="30" width="80" height="50" rx="3" fill="#1d3461"/>
+    
+    <!-- Wheels -->
+    <circle cx="35" cy="95" r="18" fill="#1d3461" stroke="#64ffda" stroke-width="3"/>
+    <circle cx="115" cy="95" r="18" fill="#1d3461" stroke="#64ffda" stroke-width="3"/>
+    <circle cx="35" cy="95" r="8" fill="#64ffda"/>
+    <circle cx="115" cy="95" r="8" fill="#64ffda"/>
+    
+    <!-- Headlights -->
+    <rect x="145" y="40" width="8" height="15" rx="2" fill="#ffcc00"/>
+    <rect x="145" y="65" width="8" height="15" rx="2" fill="#ff4444"/>
+  </g>
+  
+  <!-- Police Car (Background) -->
+  <g transform="translate(550, 320)" opacity="0.8">
+    <rect x="0" y="10" width="60" height="30" rx="5" fill="#1d3461"/>
+    <rect x="5" y="0" width="50" height="15" rx="3" fill="#112240"/>
+    <circle cx="15" cy="42" r="8" fill="#1d3461" stroke="#ff4444" stroke-width="2"/>
+    <circle cx="45" cy="42" r="8" fill="#1d3461" stroke="#ff4444" stroke-width="2"/>
+    <!-- Police Lights -->
+    <rect x="15" y="2" width="10" height="6" rx="2" fill="#ff4444"/>
+    <rect x="35" y="2" width="10" height="6" rx="2" fill="#0066ff"/>
+  </g>
+  
+  <!-- Mini Planet Icons -->
+  <g transform="translate(100, 80)">
+    <circle r="40" fill="#1d3461" stroke="#64ffda" stroke-width="2"/>
+    <ellipse cx="0" cy="0" rx="35" ry="10" fill="none" stroke="#64ffda" stroke-width="1" opacity="0.5"/>
+    <circle cx="-10" cy="-10" r="8" fill="#64ffda" opacity="0.3"/>
+    <circle cx="15" cy="5" r="5" fill="#64ffda" opacity="0.3"/>
+    <text x="0" y="60" text-anchor="middle" fill="#8892b0" font-family="Arial, sans-serif" font-size="10">PROCEDURAL</text>
+  </g>
+  
+  <!-- HUD Elements -->
+  <!-- Fuel Gauge -->
+  <g transform="translate(50, 400)">
+    <rect x="0" y="0" width="120" height="25" rx="5" fill="#112240" stroke="#64ffda" stroke-width="1"/>
+    <text x="10" y="16" fill="#64ffda" font-family="Arial, sans-serif" font-size="10">FUEL</text>
+    <rect x="45" y="5" width="70" height="15" rx="3" fill="#1d3461"/>
+    <rect x="47" y="7" width="45" height="11" rx="2" fill="#ffcc00"/>
+  </g>
+  
+  <!-- Cargo Health -->
+  <g transform="translate(50, 435)">
+    <rect x="0" y="0" width="120" height="25" rx="5" fill="#112240" stroke="#64ffda" stroke-width="1"/>
+    <text x="10" y="16" fill="#64ffda" font-family="Arial, sans-serif" font-size="10">CARGO</text>
+    <rect x="45" y="5" width="70" height="15" rx="3" fill="#1d3461"/>
+    <rect x="47" y="7" width="60" height="11" rx="2" fill="#64ffda"/>
+  </g>
+  
+  <!-- Base Counter -->
+  <g transform="translate(630, 400)">
+    <rect x="0" y="0" width="120" height="60" rx="8" fill="#112240" stroke="#64ffda" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#64ffda" font-family="Arial, sans-serif" font-size="12">BASES REACHED</text>
+    <text x="60" y="50" text-anchor="middle" fill="#ccd6f6" font-family="Arial, sans-serif" font-size="20" font-weight="bold">2 / 5</text>
+  </g>
+  
+  <!-- Speed Indicator -->
+  <g transform="translate(680, 80)">
+    <text x="0" y="0" text-anchor="middle" fill="#64ffda" font-family="Arial, sans-serif" font-size="32" font-weight="bold">87</text>
+    <text x="0" y="20" text-anchor="middle" fill="#8892b0" font-family="Arial, sans-serif" font-size="12">km/h</text>
+  </g>
+  
+  <!-- Stars -->
+  <g fill="#64ffda" opacity="0.6">
+    <circle cx="50" cy="30" r="2"/>
+    <circle cx="150" cy="50" r="1.5"/>
+    <circle cx="250" cy="25" r="2"/>
+    <circle cx="450" cy="40" r="1.5"/>
+    <circle cx="550" cy="20" r="2"/>
+    <circle cx="620" cy="55" r="1.5"/>
+    <circle cx="750" cy="35" r="2"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="485" text-anchor="middle" fill="#ccd6f6" font-family="Arial, sans-serif" font-size="22" font-weight="bold">QUICK TRUCK • Mobile Game</text>
+</svg>

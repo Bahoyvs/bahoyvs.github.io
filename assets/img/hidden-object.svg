@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a192f"/>
+      <stop offset="100%" style="stop-color:#112240"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#64ffda"/>
+      <stop offset="100%" style="stop-color:#00BFFF"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- Room Walls -->
+  <g fill="#1d3461" stroke="#64ffda" stroke-width="1" opacity="0.5">
+    <polygon points="100,100 400,50 700,100 700,400 400,450 100,400"/>
+    <line x1="100" y1="100" x2="100" y2="400"/>
+    <line x1="700" y1="100" x2="700" y2="400"/>
+    <line x1="400" y1="50" x2="400" y2="450"/>
+  </g>
+  
+  <!-- Floor Grid -->
+  <g stroke="#64ffda" stroke-width="0.5" opacity="0.3">
+    <line x1="150" y1="150" x2="150" y2="380"/>
+    <line x1="250" y1="120" x2="250" y2="400"/>
+    <line x1="350" y1="100" x2="350" y2="420"/>
+    <line x1="450" y1="100" x2="450" y2="420"/>
+    <line x1="550" y1="120" x2="550" y2="400"/>
+    <line x1="650" y1="150" x2="650" y2="380"/>
+    <line x1="120" y1="180" x2="680" y2="180"/>
+    <line x1="110" y1="250" x2="690" y2="250"/>
+    <line x1="110" y1="320" x2="690" y2="320"/>
+  </g>
+  
+  <!-- Hidden Objects (Highlighted) -->
+  <g filter="url(#glow)">
+    <!-- Object 1: Key -->
+    <g transform="translate(200, 200)">
+      <circle r="20" fill="#64ffda" opacity="0.2"/>
+      <path d="M-5,-10 L5,-10 L5,5 L10,5 L10,10 L5,10 L5,15 L-5,15 L-5,10 L-10,10 L-10,5 L-5,5 Z" fill="#64ffda"/>
+    </g>
+    
+    <!-- Object 2: Book -->
+    <g transform="translate(550, 280)">
+      <circle r="25" fill="#00BFFF" opacity="0.2"/>
+      <rect x="-15" y="-12" width="30" height="24" rx="2" fill="#00BFFF"/>
+      <line x1="-12" y1="-8" x2="12" y2="-8" stroke="#0a192f" stroke-width="2"/>
+      <line x1="-12" y1="-2" x2="12" y2="-2" stroke="#0a192f" stroke-width="2"/>
+      <line x1="-12" y1="4" x2="8" y2="4" stroke="#0a192f" stroke-width="2"/>
+    </g>
+    
+    <!-- Object 3: Diamond -->
+    <g transform="translate(400, 180)">
+      <circle r="22" fill="#64ffda" opacity="0.2"/>
+      <polygon points="0,-15 12,0 0,15 -12,0" fill="#64ffda"/>
+    </g>
+  </g>
+  
+  <!-- IoT Device Icons -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="80" height="50" rx="5" fill="#1d3461" stroke="#64ffda" stroke-width="2"/>
+    <circle cx="25" cy="25" r="10" fill="none" stroke="#00BFFF" stroke-width="2"/>
+    <path d="M45,15 Q55,25 45,35" fill="none" stroke="#64ffda" stroke-width="2"/>
+    <path d="M52,10 Q67,25 52,40" fill="none" stroke="#64ffda" stroke-width="2"/>
+    <text x="40" y="60" fill="#8892b0" font-family="Arial, sans-serif" font-size="10">MQTT</text>
+  </g>
+  
+  <!-- Target UI Bar -->
+  <g transform="translate(200, 420)">
+    <rect x="0" y="0" width="400" height="50" rx="10" fill="#112240" stroke="#64ffda" stroke-width="2"/>
+    <text x="200" y="18" text-anchor="middle" fill="#64ffda" font-family="Arial, sans-serif" font-size="12">FIND THESE OBJECTS</text>
+    
+    <!-- Mini object icons -->
+    <circle cx="80" cy="35" r="12" fill="#64ffda" opacity="0.3"/>
+    <circle cx="80" cy="35" r="8" fill="#64ffda"/>
+    
+    <circle cx="160" cy="35" r="12" fill="#00BFFF" opacity="0.3"/>
+    <rect x="153" y="28" width="14" height="14" fill="#00BFFF"/>
+    
+    <circle cx="240" cy="35" r="12" fill="#64ffda" opacity="0.3"/>
+    <polygon points="240,25 248,35 240,45 232,35" fill="#64ffda"/>
+    
+    <circle cx="320" cy="35" r="12" fill="none" stroke="#8892b0" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="320" y="38" text-anchor="middle" fill="#8892b0" font-family="Arial, sans-serif" font-size="10">?</text>
+  </g>
+  
+  <!-- Score -->
+  <g transform="translate(650, 50)">
+    <text x="50" y="20" text-anchor="middle" fill="#64ffda" font-family="Arial, sans-serif" font-size="14" font-weight="bold">FOUND</text>
+    <text x="50" y="45" text-anchor="middle" fill="#ccd6f6" font-family="Arial, sans-serif" font-size="24" font-weight="bold">3/7</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="495" text-anchor="middle" fill="#ccd6f6" font-family="Arial, sans-serif" font-size="20" font-weight="bold">HIDDEN OBJECT ROOM • IoT Connected</text>
+</svg>
