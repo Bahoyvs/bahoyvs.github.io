@@ -1,8 +1,8 @@
 # İlhan Bahadır Yavaş - Portfolio Website
 
-A modern, responsive portfolio website showcasing game development and VR projects. Built with vanilla HTML, CSS, and JavaScript featuring a cyberpunk/sci-fi aesthetic.
+A modern, responsive portfolio website for a software engineer and game developer: Unity and Unreal Engine gameplay systems, multiplayer networking, and the backends behind them. Built with vanilla HTML, CSS, and JavaScript, with a cyberpunk/sci-fi aesthetic.
 
-![Portfolio Preview](src/assets/img/vr-showroom.svg)
+Live at **[bahoyvs.github.io](https://bahoyvs.github.io)**.
 
 ## 🚀 Features
 
@@ -10,6 +10,7 @@ A modern, responsive portfolio website showcasing game development and VR projec
 - **Fully Responsive**: Optimized for mobile, tablet, and desktop devices
 - **Smooth Animations**: AOS (Animate On Scroll) library integration
 - **Interactive Project Modals**: Detailed project information in pop-up modals
+- **Experience Timeline**: Work history rendered as a vertical timeline
 - **Sticky Navigation**: Smart navbar with hamburger menu for mobile
 - **Progress Bars**: Animated skill level indicators
 - **Contact Form**: Ready-to-use contact form (mailto-based)
@@ -19,20 +20,15 @@ A modern, responsive portfolio website showcasing game development and VR projec
 ## 📁 Project Structure
 
 ```
-Portfolio-Website/
-├── src/
-│   ├── index.html          # Main HTML file
-│   ├── style.css           # All custom styles
-│   ├── scripts.js          # JavaScript functionality
-│   └── assets/
-│       ├── img/
-│       │   ├── profile.svg       # Profile placeholder
-│       │   ├── vr-showroom.svg   # VR Showroom project image
-│       │   ├── zombie-survival.svg
-│       │   ├── hidden-object.svg
-│       │   └── quick-truck.svg
-│       └── cv.pdf               # CV download (add your own)
-└── README.md
+bahoyvs.github.io/
+├── index.html          # Main HTML file
+├── style.css           # All custom styles
+├── scripts.js          # Project data, modals, animations
+├── assets/
+│   ├── img/            # Project artwork and placeholders
+│   ├── images/         # Photos and screenshots
+│   └── cv.pdf          # Downloadable CV
+└── readme.md
 ```
 
 ## 🛠️ Getting Started
@@ -47,20 +43,19 @@ Portfolio-Website/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/bahoyvs/portfolio-website.git
-   cd portfolio-website
+   git clone https://github.com/bahoyvs/bahoyvs.github.io.git
+   cd bahoyvs.github.io
    ```
 
 2. **Open with Live Server**
    
    Using VS Code:
    - Install the "Live Server" extension
-   - Right-click on `src/index.html`
+   - Right-click on `index.html`
    - Select "Open with Live Server"
 
    Or using Python:
    ```bash
-   cd src
    python -m http.server 8000
    ```
    Then open `http://localhost:8000` in your browser.
@@ -78,21 +73,21 @@ Portfolio-Website/
 Since this is a static website, you can deploy it to any static hosting service:
 
 #### GitHub Pages
-1. Push your code to a GitHub repository
+1. Push your code to the `username.github.io` repository
 2. Go to Settings > Pages
-3. Select the branch and `/src` folder as the source
-4. Your site will be available at `https://username.github.io/repository-name`
+3. Select the branch and the root folder as the source
+4. Your site will be available at `https://username.github.io`
 
 #### Netlify
 1. Connect your GitHub repository
 2. Set build command: (leave empty)
-3. Set publish directory: `src`
+3. Set publish directory: `.`
 4. Deploy!
 
 #### Vercel
 1. Import your GitHub repository
 2. Framework Preset: Other
-3. Root Directory: `src`
+3. Root Directory: `.`
 4. Deploy!
 
 ## 🎨 Customization
@@ -122,14 +117,17 @@ To change fonts, update the Google Fonts link in `index.html` and the font-famil
 
 ### Adding Projects
 
-1. Add your project image to `src/assets/img/`
+1. Add your project image to `assets/img/`
 2. Add project data in `scripts.js`:
 
 ```javascript
 const projectData = {
     'your-project-id': {
         title: 'Project Title',
+        role: 'Your role on the project',        // optional
         image: 'assets/img/your-image.jpg',
+        video: 'https://youtu.be/VIDEO_ID',      // optional, replaces the image
+        awards: ['Award name, Event 2026'],      // optional
         description: 'Project description...',
         features: [
             'Feature 1',
@@ -202,6 +200,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👤 Author
 
 **İlhan Bahadır Yavaş**
+- Portfolio: [bahoyvs.github.io](https://bahoyvs.github.io)
 - LinkedIn: [linkedin.com/in/bahoyvs](https://linkedin.com/in/bahoyvs)
 - GitHub: [github.com/bahoyvs](https://github.com/bahoyvs)
 - Email: ilhanbahadiryavas@gmail.com
