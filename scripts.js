@@ -18,71 +18,105 @@ const projectDetailBtns = document.querySelectorAll('.btn-details, .btn-view-det
 
 // ===== Project Data =====
 const projectData = {
-    'vr-showroom': {
-        title: 'VR Showroom Project',
-        image: 'assets/img/vr-showroom.svg',
-        description: 'A virtual showroom built with UE5 VR Template where users freely explore space, examine assets, and trigger contextual interactions. This project showcases immersive VR development skills with a focus on user experience and performance optimization.',
+    'c-building': {
+        title: 'Project C-Building — Co-op Isometric Action Roguelite',
+        role: 'Systems Programmer',
+        image: 'assets/img/profile.svg',
+        description: 'A 4-player co-op isometric action roguelite built in Unity, spanning 5 distinct biomes and a hero roster of 8 playable characters with fully composable ability kits.',
         features: [
-            'Modular blueprint components including overlap/trace/grab mechanics for intuitive VR interaction.',
-            'Lumen, Nanite, Level of Detail, and visibility culling optimizations with stat unit/GPU profiling.',
-            'VR locomotion system with teleport and snap turn functionality; tested ergonomics settings for comfort.',
-            'Contextual interaction triggers that respond to user proximity and gaze direction.',
-            'Scalable architecture designed for easy addition of new showroom items and experiences.'
+            'Architected a data-driven combat framework (ComposedAbilitySO pipeline) replacing hardcoded per-hero logic, letting designers compose abilities from reusable Effect/Delivery primitives while preserving hooks for bespoke hero mechanics.',
+            'Built the multiplayer networking foundation on Unity Netcode for GameObjects (NGO) and UGS Relay/Lobby, including a session state machine, additive scene loading, and per-client camera isolation across 4 concurrent players.',
+            'Designed a dual-camera system (fixed isometric plus a free-look "God\'s Eye" observer mode) driving the game\'s asymmetric finale, where one player becomes a stationary tactical overseer for the remaining team.',
+            'Implemented a dynamic, branching music system using DSP-time-anchored bar-aligned transitions across 5 biome soundtracks and a 3-state combat/escape sequence, keeping tempo-locked layer switching free of desync.',
+            'Collaborated directly with a game designer to translate evolving GDD/LDD specifications into versioned technical architecture, proactively flagging design-implementation gaps before development.'
         ],
-        technologies: ['Unreal Engine 5', 'Blueprint', 'VR Template', 'Motion Controllers', 'Lumen', 'Nanite', 'Git']
+        technologies: ['Unity', 'C#', 'Netcode for GameObjects', 'UGS Relay/Lobby', 'URP', 'ScriptableObject Composition', 'OOP']
+    },
+    'bubbles': {
+        title: 'Bubbles — AI-Powered Turkish News Platform',
+        role: 'Senior Capstone Project · Backend Lead & Scrum Master',
+        image: 'assets/img/profile.svg',
+        awards: [
+            'Best Senior Project (System Development Award), CTIS Awards 2026',
+            "Best Presentation, Startup Studio Demo Day '26"
+        ],
+        description: 'A production news platform that ingests Turkish news feeds and enriches them with AI: summarization, political and writing perspective scoring, and multilingual semantic search.',
+        features: [
+            "Led the team's Agile / Scrum process — bi-weekly sprints, backlog grooming and retrospectives — coordinating frontend, backend and AI/ML developers in Jira.",
+            'Architected and operated the backend: containerized microservices (Docker) on Railway, PM2 background workers for RSS ingestion and AI processing, and a Redis + BullMQ job queue.',
+            'Built CI/CD pipelines with GitHub Actions automating build, test and deployment; added health-check endpoints and external uptime monitoring after diagnosing a production outage.',
+            'Managed MongoDB Atlas (indexing, TTL policies, performance tuning) and a Qdrant vector database powering multilingual semantic search.',
+            'Integrated AI into production: a fine-tuned mBART Turkish summarizer plus political / writing perspective-score models served on Modal Labs GPUs, with LLM taggers (DeepSeek, Groq) for enrichment.'
+        ],
+        technologies: ['Node.js', 'Docker', 'MongoDB Atlas', 'Qdrant', 'Redis + BullMQ', 'Modal Labs (GPU)', 'GitHub Actions', 'PM2']
+    },
+    'bloomwake': {
+        title: 'BloomWake — Browser-Based Swarm Survivor',
+        role: 'Solo Developer · Published on CrazyGames',
+        image: 'assets/img/profile.svg',
+        description: 'A high-performance "Vampire Survivors" style bounded-swarm game for the browser, engineered so that hundreds of simultaneous on-screen entities never cost the frame budget.',
+        features: [
+            'Optimized rendering path that keeps hundreds of concurrent enemies on screen without frame drops.',
+            'Object pooling and allocation-free hot paths through the update loop.',
+            'Spatial partitioning to keep broadphase collision cost near-linear as the swarm grows.',
+            'Bounded-arena wave design tuned so difficulty scales with player power rather than raw entity count.'
+        ],
+        technologies: ['JavaScript', 'Canvas/WebGL', 'Vector Math', 'Spatial Partitioning', 'Object Pooling']
+    },
+    'aerodrop': {
+        title: 'AeroDrop — Physics-Based Cell-Growing Game',
+        role: 'Solo Developer · Published on CrazyGames',
+        image: 'assets/img/profile.svg',
+        description: 'A physics-driven browser game where the player grows by absorbing mass, built around integrated water physics and a movement system whose cost scales with size.',
+        features: [
+            'Integrated water physics simulation driving buoyancy, drag and momentum.',
+            'Mass-based "Jet Boost" movement system that trades size for acceleration.',
+            'Dynamic bot AI simulation producing a populated arena without a server.',
+            'Vector-math driven collision and absorption rules tuned for readable feedback.'
+        ],
+        technologies: ['TypeScript', 'JavaScript', 'Canvas/WebGL', 'Vector Math', 'Bot AI']
+    },
+    'not-enough-mana': {
+        title: 'Not Enough Mana — 2D Browser Card Game',
+        role: 'Solo Developer',
+        image: 'assets/img/profile.svg',
+        description: 'A 2D browser-based card game developed from scratch in PixiJS, with its own rendering pipeline, asset management and turn-based state logic.',
+        features: [
+            'Modular graphics rendering pipeline built directly on PixiJS and HTML5 Canvas.',
+            'Custom asset management layer handling loading, atlases and runtime lookup.',
+            'Robust turn-based game state machine covering draw, play, resolve and end-turn phases.',
+            'Data-driven card definitions so new cards are content, not code.'
+        ],
+        technologies: ['PixiJS', 'HTML5 Canvas', 'JavaScript', 'Game State Management']
     },
     'zombie-survival': {
-        title: 'Zombie Survival Game',
+        title: 'Zombie Survival — Unreal Engine 5 Co-op Prototype',
+        role: 'Solo Developer',
         image: 'assets/img/zombie-survival.svg',
         video: 'https://youtu.be/PsBm4uJqYyc',
-        description: 'A cooperative survival loop prototype featuring round pacing, resource pressure, and comprehensive health/damage feedback systems including screen shake, post-process effects, and audio cues.',
+        description: 'A cooperative survival loop prototype featuring round pacing, resource pressure, and health/damage feedback including screen shake, post-process effects and audio cues.',
         features: [
-            'Level blockouts designed for optimal player flow, strategic choke points, and sight lines.',
-            'Enemy behaviors powered by Behavior Trees and Environment Query System (EQS).',
+            'Enemy AI authored with Behavior Trees and the Environment Query System (EQS).',
             'NavMesh integration with spawn timer and aggro tuning for balanced difficulty.',
-            'Blueprint-based pickup system with simple inventory and wave logic mechanics.',
-            'Debug tools including on-screen counters for real-time gameplay analysis.',
-            'Screen shake, post-process effects, and audio feedback for impactful damage visualization.'
+            'Scalable Blueprint systems for pickups, combat and inventory management.',
+            'Level blockouts designed for player flow, choke points and sight lines.',
+            'Debug tooling including on-screen counters for real-time gameplay analysis.'
         ],
-        technologies: ['UE5', 'Blueprints', 'Behavior Trees', 'NavMesh', 'DataTables', 'Perception', 'EQS']
-    },
-    'hidden-object': {
-        title: 'Hidden Object Room Game (IoT-Connected)',
-        image: 'assets/img/hidden-object.svg',
-        description: 'A room-scale hidden object experience where real physical devices send data to the game via MQTT protocol, creating a unique bridge between physical and digital interaction.',
-        features: [
-            'MQTT pub/sub integration with defined topic schema, JSON payloads, and debounce/back-pressure logic.',
-            'Item Placer actor that spawns objects by size/category and reports provenance for analytics.',
-            'UI bar displaying target objects with respawn/replace rules upon discovery.',
-            'Real-time synchronization between physical IoT devices and in-game events.',
-            'Scalable architecture supporting multiple simultaneous device connections.'
-        ],
-        technologies: ['UE5', 'Blueprint', 'Mosquitto MQTT', 'JSON', 'IoT Integration']
-    },
-    'quick-truck': {
-        title: 'Quick Truck Mobile Game',
-        image: 'assets/img/ChatGPT%20Image%20Feb%201,%202026,%2006_21_51%20PM.png',
-        description: 'A mobile truck game developed with Unreal Engine 5, featuring optimized infinite procedural maps and AI-driven police vehicle pursuit system.',
-        features: [
-            'Infinite procedural mini-planet map generation for endless gameplay variety.',
-            'AI-driven police vehicles that pursue and challenge the player.',
-            'Intuitive vehicle controls: press left/right to steer, simultaneous press for brake/reverse.',
-            'Fuel and cargo health management systems adding strategic depth.',
-            'Mission objective: reach 5 military bases across the procedurally generated world.',
-            'Curved World shader for unique visual perspective and horizon effect.'
-        ],
-        technologies: ['UE5', 'Blueprint', 'Procedural Generation', 'AI', 'Curved World Shader', 'Mobile Optimization']
+        technologies: ['UE5', 'Blueprints', 'Behavior Trees', 'NavMesh', 'EQS', 'DataTables', 'Perception']
     }
 };
 
 // ===== Initialize AOS =====
 document.addEventListener('DOMContentLoaded', () => {
-    AOS.init({
-        duration: 800,
-        easing: 'ease-out-cubic',
-        once: true,
-        offset: 100
-    });
+    // AOS is loaded from a CDN; the page must still work if it fails to load.
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+    }
     
     // Initialize Typewriter Effect
     initTypewriter();
@@ -97,11 +131,11 @@ function initTypewriter() {
     if (!typewriterElement) return;
     
     const roles = [
+        'Software Engineer',
         'Game Developer',
-        'VR Experience Designer',
-        'Unreal Engine 5 Specialist',
-        'Immersive Tech Creator',
-        'Blueprint Developer'
+        'Unity & Unreal Engine Developer',
+        'Multiplayer Systems Programmer',
+        'Backend & AI Systems Developer'
     ];
     
     let roleIndex = 0;
@@ -306,9 +340,16 @@ function openModal(projectId) {
         `;
     }
     
+    const roleHTML = project.role ? `<p class="modal-role">${project.role}</p>` : '';
+    const awardsHTML = project.awards
+        ? `<ul class="modal-awards">${project.awards.map(a => `<li><i class="fas fa-trophy"></i> ${a}</li>`).join('')}</ul>`
+        : '';
+
     modalBody.innerHTML = `
-        ${videoHTML || `<img src="${project.image}" alt="${project.title}" class="modal-image" loading="lazy">`}
+        ${videoHTML}
         <h3>${project.title}</h3>
+        ${roleHTML}
+        ${awardsHTML}
         <p>${project.description}</p>
         <h4>Key Features</h4>
         <ul>${featuresHTML}</ul>
