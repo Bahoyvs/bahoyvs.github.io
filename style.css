@@ -755,31 +755,7 @@ img {
     100% { transform: translateX(100%) rotate(45deg); }
 }
 
-/* Hero Companies */
-.hero-companies {
-    margin-top: var(--spacing-xl);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
 
-.companies-label {
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.company-name {
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 8px 20px;
-    background: rgba(100, 255, 218, 0.1);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(100, 255, 218, 0.2);
-}
 
 .hero-buttons {
     display: flex;
@@ -1724,9 +1700,7 @@ img {
         height: 30px;
     }
     
-    .hero-companies {
-        margin-top: var(--spacing-lg);
-    }
+
     
     .project-card {
         margin: 0 auto;
@@ -1797,18 +1771,7 @@ img {
     display: none;
 }
 
-/* ===== Hero Company Strip ===== */
-.hero-companies {
-    margin-top: 0;
-    margin-bottom: var(--spacing-xl);
-}
 
-.hero-company-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-sm);
-}
 
 /* ===== Experience Timeline ===== */
 .timeline {
