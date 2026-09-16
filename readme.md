@@ -1,210 +1,147 @@
-# İlhan Bahadır Yavaş - Portfolio Website
+# İlhan Bahadır Yavaş - Portfolio
 
-A modern, responsive portfolio website for a software engineer and game developer: Unity and Unreal Engine gameplay systems, multiplayer networking, and the backends behind them. Built with vanilla HTML, CSS, and JavaScript, with a cyberpunk/sci-fi aesthetic.
+Portfolio site for a software engineer working across systems, backend, game engines and DevOps.
+Vanilla HTML, CSS and JavaScript. No build step, no framework, no runtime dependency on a CDN.
 
 Live at **[bahoyvs.github.io](https://bahoyvs.github.io)**.
 
-## 🚀 Features
+## Design system
 
-- **Modern Cyberpunk Design**: Dark theme with neon accent colors (#64ffda, #00BFFF)
-- **Fully Responsive**: Optimized for mobile, tablet, and desktop devices
-- **Smooth Animations**: AOS (Animate On Scroll) library integration
-- **Interactive Project Modals**: Detailed project information in pop-up modals
-- **Experience Timeline**: Work history rendered as a vertical timeline
-- **Sticky Navigation**: Smart navbar with hamburger menu for mobile
-- **Progress Bars**: Animated skill level indicators
-- **Contact Form**: Ready-to-use contact form (mailto-based)
-- **SEO Optimized**: Proper meta tags, semantic HTML, and accessibility features
-- **Lazy Loading**: Optimized image loading for better performance
+Dark anthracite monochrome with a single signal accent. Three locks hold the page together:
 
-## 📁 Project Structure
+| Lock | Rule |
+| --- | --- |
+| Theme | Dark only. `color-scheme: dark` on `:root`. No section inverts. |
+| Accent | `--accent: #a8e24c` is the only accent on the page. |
+| Shape | Cards `16px`, chips and tags `8px`, buttons and pills fully round. |
+
+All tokens live at the top of `style.css`. Changing `--accent` there restyles the entire site,
+including the WebGL hero field (the shader reads the same value through the `u_accent` uniform in
+`scripts.js`).
+
+**Typography:** Geist for UI, Geist Mono for technical metadata (dates, tags, counts, kickers).
+
+**Contrast:** every ink and surface pairing in use clears WCAG AA. The tightest is
+`--text-dim` on `--surface-3` at 4.72:1.
+
+## Structure
 
 ```
 bahoyvs.github.io/
-├── index.html          # Main HTML file
-├── style.css           # All custom styles
-├── scripts.js          # Project data, modals, animations
+├── index.html      # Markup and copy
+├── style.css       # Tokens, layout, components, responsive, reduced motion
+├── scripts.js      # WebGL hero, observers, filter, modal
+├── favicon.svg
 ├── assets/
-│   ├── img/            # Project artwork and placeholders
-│   ├── images/         # Photos and screenshots
-│   └── cv.pdf          # Downloadable CV
+│   ├── img/        # Project artwork
+│   ├── images/     # Photos and screenshots
+│   └── cv.pdf
 └── readme.md
 ```
 
-## 🛠️ Getting Started
+## The hero WebGL field
 
-### Prerequisites
+A fullscreen-triangle fragment shader in `scripts.js`: two levels of domain warping over
+value-noise fbm, producing a slow anthracite flow with sparse accent filaments.
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A code editor (VS Code recommended)
-- Optional: Live Server extension for local development
+It is written to stay cheap:
 
-### Local Development
+- Renders at `0.72` of CSS size (`0.55` when `hardwareConcurrency <= 4`), DPR capped at `1.5`,
+  then upscaled. The field is soft enough that the upscale is invisible.
+- One-shot adaptive downscale to `0.45` if frames run long for a sustained stretch.
+- The `requestAnimationFrame` loop stops entirely when the hero leaves the viewport
+  (IntersectionObserver) or the tab is hidden (`visibilitychange`).
+- Under `prefers-reduced-motion: reduce` it paints a single static frame and never loops.
+- If WebGL is unavailable the canvas is removed and the CSS gradient on `.hero-canvas-wrap`
+  stays as the background. Context loss is handled.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/bahoyvs/bahoyvs.github.io.git
-   cd bahoyvs.github.io
-   ```
+Tuning knobs, all in the `FRAG_SRC` array:
 
-2. **Open with Live Server**
-   
-   Using VS Code:
-   - Install the "Live Server" extension
-   - Right-click on `index.html`
-   - Select "Open with Live Server"
+| Knob | Effect |
+| --- | --- |
+| `u_time * 0.042` | Flow speed. |
+| `filament * 0.20` | Accent brightness. Raise for a louder field. |
+| `pow(ridge, 8.5)` | Filament sparsity. Higher is sparser. |
+| `col *= 1.0 - 0.62 * ...` | Vignette depth. |
 
-   Or using Python:
-   ```bash
-   python -m http.server 8000
-   ```
-   Then open `http://localhost:8000` in your browser.
+## Interaction notes
 
-   Or using Node.js:
-   ```bash
-   npx serve src
-   ```
+- **No scroll listeners.** Every scroll-driven state (sticky header, nav scroll spy, reveal
+  animations, back-to-top) is derived from `IntersectionObserver`.
+- **Reveals have a failsafe.** Anything still hidden 4s after load is shown outright, so content
+  can never be stranded invisible.
+- **Tech stack filter** is a proper `tablist`: roving `tabindex`, arrow/Home/End keys, and a live
+  region announcing the result count.
+- **Project modal** traps focus, closes on Escape or scrim click, and restores focus to the
+  trigger.
+- **Reduced motion** is honored globally, including the shader.
 
-3. **Start editing!**
-   - The page will auto-reload when you save changes (with Live Server)
+## Editing content
 
-### Production Deployment
+### Adding a project
 
-Since this is a static website, you can deploy it to any static hosting service:
+1. Add an entry to `PROJECTS` in `scripts.js`:
 
-#### GitHub Pages
-1. Push your code to the `username.github.io` repository
-2. Go to Settings > Pages
-3. Select the branch and the root folder as the source
-4. Your site will be available at `https://username.github.io`
-
-#### Netlify
-1. Connect your GitHub repository
-2. Set build command: (leave empty)
-3. Set publish directory: `.`
-4. Deploy!
-
-#### Vercel
-1. Import your GitHub repository
-2. Framework Preset: Other
-3. Root Directory: `.`
-4. Deploy!
-
-## 🎨 Customization
-
-### Colors
-
-Edit the CSS variables in `style.css`:
-
-```css
-:root {
-    --color-bg-primary: #0a192f;     /* Main background */
-    --color-bg-secondary: #112240;    /* Card backgrounds */
-    --color-accent: #64ffda;          /* Primary accent (cyan) */
-    --color-accent-secondary: #00BFFF; /* Secondary accent (blue) */
-    --color-text-primary: #ccd6f6;    /* Main text */
-    --color-text-secondary: #8892b0;  /* Muted text */
+```javascript
+'your-project-id': {
+    title: 'Project Title',
+    subtitle: 'One line describing what it is',
+    kicker: 'Engine or context / Your role',
+    awards: ['Award name, Event 2026'],   // optional
+    video: 'https://youtu.be/VIDEO_ID',   // optional
+    description: 'What the project is.',
+    features: ['What you built.'],
+    technologies: ['Tech1', 'Tech2']
 }
 ```
 
-### Fonts
+2. Add the card in `index.html` inside `.work-grid`, with a
+   `<button class="work-link" data-project="your-project-id">`.
 
-The website uses Google Fonts:
-- **Poppins**: Headings (600-800 weight)
-- **Inter**: Body text (300-600 weight)
+3. Give it a grid span so the row still sums to 6 columns. The grid is six columns wide and the
+   existing rhythm is `4+2`, `2+4`, `3+3`:
 
-To change fonts, update the Google Fonts link in `index.html` and the font-family variables in `style.css`.
+| Class | Span |
+| --- | --- |
+| `.work-card-wide` | 4 |
+| `.work-card-half` | 3 |
+| `.work-card-narrow` | 2 |
 
-### Adding Projects
+A row that does not sum to 6 leaves a visible empty cell.
 
-1. Add your project image to `assets/img/`
-2. Add project data in `scripts.js`:
+### Project screenshots
 
-```javascript
-const projectData = {
-    'your-project-id': {
-        title: 'Project Title',
-        role: 'Your role on the project',        // optional
-        image: 'assets/img/your-image.jpg',
-        video: 'https://youtu.be/VIDEO_ID',      // optional, replaces the image
-        awards: ['Award name, Event 2026'],      // optional
-        description: 'Project description...',
-        features: [
-            'Feature 1',
-            'Feature 2'
-        ],
-        technologies: ['Tech1', 'Tech2']
-    }
-};
-```
-
-3. Add the project card HTML in `index.html` (copy an existing card and modify)
-
-### Replacing Placeholder Images
-
-Replace the SVG placeholders with your actual project screenshots:
-- Recommended size: 800x500px for project images
-- Recommended size: 400x400px for profile image
-- Supported formats: WebP, JPEG, PNG, SVG
-- Use `srcset` for responsive images:
+The project cards currently use tinted gradient panels carrying a real headline fact from each
+project, because no screenshots exist in the repo yet. Each card is ready for a real image.
+Replace the `.work-visual` panel with:
 
 ```html
-<img 
-    src="assets/img/project.jpg"
-    srcset="assets/img/project-small.jpg 400w,
-            assets/img/project-medium.jpg 800w,
-            assets/img/project-large.jpg 1200w"
-    sizes="(max-width: 768px) 100vw, 50vw"
-    alt="Project description"
-    loading="lazy"
->
+<div class="work-visual work-visual-image">
+    <img src="assets/img/your-shot.jpg" alt="Describe the shot"
+         width="800" height="500" loading="lazy" decoding="async">
+</div>
 ```
 
-### Contact Form Backend
+`index.html` carries a commented slot on the Zombie Survival card showing exactly this.
+Recommended size 800x500. Screenshots will noticeably lift the grid.
 
-The contact form currently uses `mailto:`. For a functional form, integrate with:
+## Local development
 
-- **Formspree**: Free form backend
-  ```html
-  <form action="https://formspree.io/f/YOUR_ID" method="POST">
-  ```
+```bash
+python -m http.server 8000
+# then open http://localhost:8000
+```
 
-- **Netlify Forms**: If deploying on Netlify
-  ```html
-  <form name="contact" netlify>
-  ```
+## Deployment
 
-- **Custom Backend**: Connect to your own API endpoint
+Static site. Push to the `bahoyvs.github.io` repository and GitHub Pages serves it from the
+repository root.
 
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome for Android)
-
-## 🔧 Technologies Used
-
-- **HTML5**: Semantic markup
-- **CSS3**: Custom properties, Flexbox, Grid, Animations
-- **JavaScript**: ES6+, IntersectionObserver, DOM manipulation
-- **AOS**: Animate On Scroll library
-- **Font Awesome**: Icon library
-- **Google Fonts**: Poppins & Inter
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
+## Author
 
 **İlhan Bahadır Yavaş**
+
 - Portfolio: [bahoyvs.github.io](https://bahoyvs.github.io)
 - LinkedIn: [linkedin.com/in/bahoyvs](https://linkedin.com/in/bahoyvs)
 - GitHub: [github.com/bahoyvs](https://github.com/bahoyvs)
 - Email: ilhanbahadiryavas@gmail.com
-
----
-
-⭐ If you found this template helpful, please give it a star!
