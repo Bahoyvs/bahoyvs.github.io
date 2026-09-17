@@ -153,6 +153,6 @@ repository root.
 **İlhan Bahadır Yavaş**
 
 - Portfolio: [bahoyvs.github.io](https://bahoyvs.github.io)
-- LinkedIn: [linkedin.com/in/bahoyvs](https://linkedin.com/in/bahoyvs)
+- LinkedIn: [linkedin.com/in/ilhan-bahadır-yavaş](https://www.linkedin.com/in/ilhan-bahad%C4%B1r-yava%C5%9F)
 - GitHub: [github.com/bahoyvs](https://github.com/bahoyvs)
 - Email: ilhanbahadiryavas@gmail.com
