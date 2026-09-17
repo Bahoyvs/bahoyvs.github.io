@@ -1,890 +1,611 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="İlhan Bahadır Yavaş - Software Engineer &amp; Game Developer. Unity and Unreal Engine gameplay systems, multiplayer networking, and the Node.js/Docker backends behind them.">
-    <meta name="keywords" content="Software Engineer, Game Developer, Unity, Unreal Engine 5, C#, C++, Multiplayer Networking, Netcode for GameObjects, Node.js, Docker, İlhan Bahadır Yavaş, Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0a0b0d">
+    <meta name="description" content="İlhan Bahadır Yavaş - Software Engineer. Gameplay systems, multiplayer netcode, containerized backends and the DevOps pipelines behind them. Unity, Unreal Engine 5, C#, C++, Node.js, Docker.">
+    <meta name="keywords" content="Software Engineer, Systems Programmer, Game Developer, Unity, Unreal Engine 5, C#, C++, Multiplayer Networking, Netcode for GameObjects, Node.js, Docker, DevOps, İlhan Bahadır Yavaş, Portfolio">
     <meta name="author" content="İlhan Bahadır Yavaş">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="İlhan Bahadır Yavaş - Software Engineer &amp; Game Developer">
-    <meta property="og:description" content="Gameplay systems, multiplayer netcode, and AI-native backends. Unity, Unreal Engine 5, C#, C++, Node.js.">
+    <meta property="og:title" content="İlhan Bahadır Yavaş - Software Engineer">
+    <meta property="og:description" content="Gameplay systems, multiplayer netcode, and AI-native backends. Unity, Unreal Engine 5, C#, C++, Node.js, Docker.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bahoyvs.github.io">
     <meta property="og:image" content="https://bahoyvs.github.io/assets/images/bahopicture-1256x1671.jpeg">
+    <meta property="og:image:alt" content="Portrait of İlhan Bahadır Yavaş">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <title>İlhan Bahadır Yavaş | Software Engineer &amp; Game Developer</title>
+    <title>İlhan Bahadır Yavaş | Software Engineer</title>
 
-    <!-- Google Fonts -->
+    <link rel="canonical" href="https://bahoyvs.github.io/">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- Type: Geist for UI, Geist Mono for technical metadata -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
+
+    <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header" id="header">
-        <nav class="navbar">
-            <a href="#home" class="nav-logo">
-                <span class="logo-text">IBY</span>
+    <a class="skip-link" href="#main">Skip to Content</a>
+
+    <!-- ==================== Navigation ==================== -->
+    <header class="site-header" id="site-header">
+        <nav class="nav" aria-label="Primary">
+            <a href="#home" class="nav-brand" aria-label="İlhan Bahadır Yavaş, back to top">
+                <span class="nav-brand-mark" aria-hidden="true">IBY</span>
             </a>
 
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
-                <span class="hamburger"></span>
-            </button>
-
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#home" class="nav-link is-current">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <a class="btn btn-ghost btn-sm nav-cv" href="assets/cv.pdf" download>Download CV</a>
+                <button class="nav-toggle" id="nav-toggle" type="button"
+                        aria-label="Open Menu" aria-expanded="false" aria-controls="nav-drawer">
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                    <span class="nav-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <div class="hero-grid"></div>
-            <div class="hero-particles"></div>
-
-            <!-- Floating Elements -->
-            <div class="floating-elements">
-                <div class="floating-element vr-headset">
-                    <i class="fas fa-vr-cardboard"></i>
-                </div>
-                <div class="floating-element cube">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="floating-element gamepad">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <div class="floating-element search">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <div class="floating-element code">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="floating-element layer">
-                    <i class="fas fa-layer-group"></i>
-                </div>
-            </div>
-
-            <!-- Scanning Lines Effect -->
-            <div class="scan-line"></div>
-
-            <!-- Corner Brackets -->
-            <div class="corner-bracket top-left"></div>
-            <div class="corner-bracket top-right"></div>
-            <div class="corner-bracket bottom-left"></div>
-            <div class="corner-bracket bottom-right"></div>
-        </div>
-
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Graduating 2026 &middot; Open to Opportunities</span>
-            </div>
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-title">İlhan Bahadır Yavaş</h1>
-            <h2 class="hero-subtitle">
-                <span class="typewriter-text"></span>
-                <span class="cursor">|</span>
-            </h2>
-            <p class="hero-motto">"I build the systems behind the play — gameplay architecture, multiplayer netcode, and the backends that keep them running."</p>
-
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-count="6">0</span>
-                    <span class="stat-label">Shipped Projects</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="2">0</span>
-                    <span class="stat-label">Awards Won</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">1+ yr</span>
-                    <span class="stat-label">Industry Experience</span>
-                </div>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary btn-glow">
-                    <i class="fas fa-rocket"></i>
-                    Explore My Work
-                </a>
-                <a href="assets/cv.pdf" class="btn btn-secondary" download>
-                    <i class="fas fa-download"></i>
-                    Download CV
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-scroll-indicator">
-            <a href="#projects" class="scroll-down">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <span class="scroll-text">Scroll to Discover</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section projects" id="projects">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Gameplay systems, multiplayer architecture, and production backends</p>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project C-Building -->
-                <article class="project-card project-card-no-image" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-icon-header">
-                        <div class="project-icon">
-                            <i class="fas fa-dungeon"></i>
-                        </div>
-                        <span class="project-company">Unity &middot; Systems Programmer</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project C-Building</h3>
-                        <p class="project-description">A 4-player co-op isometric action roguelite spanning 5 biomes and 8 playable heroes, built on a data-driven ability framework and Unity Netcode for GameObjects.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unity</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">Netcode for GameObjects</span>
-                            <span class="tech-tag">UGS Relay/Lobby</span>
-                            <span class="tech-tag">URP</span>
-                        </div>
-                        <button class="btn-details" data-project="c-building">
-                            Show Details <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Bubbles -->
-                <article class="project-card project-card-no-image" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-icon-header">
-                        <div class="project-icon">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <span class="project-company">Senior Capstone &middot; Team Lead</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Bubbles <span class="project-award"><i class="fas fa-trophy"></i> Award-Winning</span></h3>
-                        <p class="project-description">An AI-powered Turkish news platform: containerized microservices, a Redis + BullMQ ingestion pipeline, and fine-tuned summarization and perspective-scoring models served on GPU.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">MongoDB Atlas</span>
-                            <span class="tech-tag">Qdrant</span>
-                            <span class="tech-tag">Redis + BullMQ</span>
-                            <span class="tech-tag">Modal Labs</span>
-                        </div>
-                        <button class="btn-details" data-project="bubbles">
-                            Show Details <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- BloomWake -->
-                <article class="project-card project-card-no-image" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-icon-header">
-                        <div class="project-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <span class="project-company">CrazyGames &middot; Browser</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">BloomWake</h3>
-                        <p class="project-description">A bounded-swarm survivor arena for the browser, engineered to hold hundreds of on-screen entities without frame drops through pooling and optimized rendering.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Canvas/WebGL</span>
-                            <span class="tech-tag">Spatial Partitioning</span>
-                            <span class="tech-tag">Object Pooling</span>
-                        </div>
-                        <button class="btn-details" data-project="bloomwake">
-                            Show Details <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- AeroDrop -->
-                <article class="project-card project-card-no-image" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-icon-header">
-                        <div class="project-icon">
-                            <i class="fas fa-water"></i>
-                        </div>
-                        <span class="project-company">CrazyGames &middot; Browser</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AeroDrop</h3>
-                        <p class="project-description">A physics-based cell-growing game built on integrated water physics, a mass-based "Jet Boost" movement system, and dynamic bot AI simulation.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Canvas/WebGL</span>
-                            <span class="tech-tag">Vector Math</span>
-                            <span class="tech-tag">Bot AI</span>
-                        </div>
-                        <button class="btn-details" data-project="aerodrop">
-                            Show Details <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Not Enough Mana -->
-                <article class="project-card project-card-no-image" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-icon-header">
-                        <div class="project-icon">
-                            <i class="fas fa-hat-wizard"></i>
-                        </div>
-                        <span class="project-company">PixiJS &middot; Browser</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Not Enough Mana</h3>
-                        <p class="project-description">A 2D turn-based card game written from scratch in PixiJS, with a modular rendering pipeline, custom asset management, and a robust game state machine.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PixiJS</span>
-                            <span class="tech-tag">HTML5 Canvas</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">State Management</span>
-                        </div>
-                        <button class="btn-details" data-project="not-enough-mana">
-                            Show Details <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Zombie Survival -->
-                <article class="project-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-image">
-                        <img src="assets/img/zombie-survival.svg" alt="Zombie Survival - cooperative Unreal Engine 5 survival prototype" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://youtu.be/PsBm4uJqYyc" target="_blank" rel="noopener noreferrer" class="btn-play-video" aria-label="Watch Demo">
-                                <i class="fas fa-play"></i>
-                            </a>
-                            <button class="btn-view-details" data-project="zombie-survival">
-                                <i class="fas fa-expand"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Zombie Survival</h3>
-                        <p class="project-description">A co-op survival prototype in Unreal Engine 5: behavior-tree enemy AI, NavMesh navigation, and scalable pickup, combat, and inventory systems.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">UE5</span>
-                            <span class="tech-tag">Blueprints</span>
-                            <span class="tech-tag">Behavior Trees</span>
-                            <span class="tech-tag">NavMesh</span>
-                        </div>
-                        <button class="btn-details" data-project="zombie-survival">
-                            Show Details <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section experience" id="experience">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">Shipping production software in game and enterprise teams</p>
-            </div>
-
-            <div class="timeline">
-                <!-- INFINIA - Full Time -->
-                <article class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="timeline-role">Unreal Engine Game Developer</h3>
-                                <p class="timeline-company">INFINIA Engineering <span class="timeline-location">&middot; Ankara</span></p>
-                            </div>
-                            <div class="timeline-meta">
-                                <span class="timeline-date">Jan 2025 &ndash; May 2025</span>
-                                <span class="timeline-type">Full-Time</span>
-                            </div>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Developed immersive VR and 3D interactive environments using Unreal Engine 5 and C++.</li>
-                            <li>Implemented gameplay logic, event triggers, and custom blueprint systems for advanced interactivity.</li>
-                            <li>Collaborated with the design team to integrate interactive mechanics, optimize performance, and refine user experience.</li>
-                            <li>Shipped a room-scale hidden object experience in which physical devices drive in-game events over MQTT, with a defined topic schema, JSON payloads, and debounce logic.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unreal Engine 5</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Blueprints</span>
-                            <span class="tech-tag">MQTT / IoT</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- INFINIA - Part Time -->
-                <article class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="timeline-role">Unreal Engine Game Developer</h3>
-                                <p class="timeline-company">INFINIA Engineering <span class="timeline-location">&middot; Ankara</span></p>
-                            </div>
-                            <div class="timeline-meta">
-                                <span class="timeline-date">Sep 2024 &ndash; Jan 2025</span>
-                                <span class="timeline-type">Part-Time</span>
-                            </div>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Focused on VR development, including object interaction systems and environment optimization.</li>
-                            <li>Designed interactive experiences compatible with multiple VR platforms.</li>
-                            <li>Worked closely with 3D artists and designers to implement visual storytelling within Unreal Engine.</li>
-                            <li>Built a VR showroom on the UE5 VR template — modular grab/trace interaction components, teleport and snap-turn locomotion, and Lumen/Nanite/LOD profiling passes.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unreal Engine 5</span>
-                            <span class="tech-tag">VR</span>
-                            <span class="tech-tag">Lumen</span>
-                            <span class="tech-tag">Nanite</span>
-                            <span class="tech-tag">Performance Profiling</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- INFINIA - Intern -->
-                <article class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="timeline-role">Unreal Engine Game Developer Intern</h3>
-                                <p class="timeline-company">INFINIA Engineering <span class="timeline-location">&middot; Ankara</span></p>
-                            </div>
-                            <div class="timeline-meta">
-                                <span class="timeline-date">Jul 2024 &ndash; Aug 2024</span>
-                                <span class="timeline-type">Internship</span>
-                            </div>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Assisted in developing gameplay systems, level blueprints, and interactive UI elements.</li>
-                            <li>Gained hands-on experience in game design, 3D modeling integration, and performance optimization.</li>
-                            <li>Learned best practices for collaboration in a production environment.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unreal Engine 5</span>
-                            <span class="tech-tag">Blueprints</span>
-                            <span class="tech-tag">UI</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- BTC Bilisim -->
-                <article class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="timeline-role">Intern Student</h3>
-                                <p class="timeline-company">BTC Bilişim Hizmetleri <span class="timeline-location">&middot; İstanbul</span></p>
-                            </div>
-                            <div class="timeline-meta">
-                                <span class="timeline-date">Jun 2024 &ndash; Jul 2024</span>
-                                <span class="timeline-type">Internship</span>
-                            </div>
-                        </div>
-                        <ul class="timeline-list">
-                            <li>Worked on SQL-based data operations and SAP ERP systems.</li>
-                            <li>Wrote and optimized SQL queries and built operational reports for internal business units.</li>
-                            <li>Contributed to database design and report generation, and helped improve internal workflows by leveraging ERP functionality.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">SAP ERP</span>
-                            <span class="tech-tag">Database Design</span>
-                            <span class="tech-tag">Reporting</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know the developer behind the projects</p>
-            </div>
-
-            <div class="about-content">
-                <div class="about-image" data-aos="fade-right" data-aos-delay="100">
-                    <div class="image-wrapper">
-                        <img src="assets/images/bahopicture-1256x1671.jpeg" alt="İlhan Bahadır Yavaş - Software Engineer and Game Developer portrait" loading="lazy">
-                        <div class="image-decoration"></div>
-                    </div>
-                </div>
-
-                <div class="about-text" data-aos="fade-left" data-aos-delay="200">
-                    <h3 class="about-heading">Software Engineer &amp; Game Developer</h3>
-                    <p class="about-bio">
-                        I'm a software engineer and game developer with a strong foundation in C#, C++, and object-oriented design. I build interactive gameplay mechanics, optimize game loops, and design multiplayer network architectures in Unity and Unreal Engine — and I'm equally at home on the backend, where containerized services, job queues, and databases keep those products running.
-                    </p>
-                    <p class="about-bio">
-                        I prototype quickly for 2D and 3D games, work in Agile/Scrum teams, and care about clean, scalable code in dynamic game environments. Most recently I led the backend and Scrum process for an AI-powered news platform that won Best Senior Project at the CTIS Awards 2026.
-                    </p>
-
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>Education</h4>
-                                <p>Ankara İhsan Doğramacı Bilkent University &mdash; Information Systems and Technologies</p>
-                                <span class="detail-year">2021 &ndash; 2026</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-trophy"></i>
-                            <div>
-                                <h4>Awards</h4>
-                                <p>Best Senior Project (System Development Award), CTIS Awards 2026<br>Best Presentation, Startup Studio Demo Day '26</p>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-language"></i>
-                            <div>
-                                <h4>Languages</h4>
-                                <p>Turkish &mdash; Native &nbsp;|&nbsp; English &mdash; Upper Intermediate</p>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-heart"></i>
-                            <div>
-                                <h4>Interests</h4>
-                                <p>Game Design, Artificial Intelligence, Mathematics, Basketball, Travel</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Skills &amp; Expertise</h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-
-            <div class="skills-content">
-                <!-- Game Development & Engines -->
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="category-title">
-                        <i class="fas fa-gamepad"></i>
-                        Game Development &amp; Engines
-                    </h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-unity"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Unity</h4>
-                                <p>Gameplay systems, URP &amp; data-driven architecture</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 90%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-cubes"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Unreal Engine 5</h4>
-                                <p>VR, blueprints &amp; C++ gameplay programming</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 85%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Multiplayer Networking</h4>
-                                <p>Netcode for GameObjects, UGS Relay &amp; Lobby</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 80%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-gauge-high"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Performance Optimization</h4>
-                                <p>Frame budgets, pooling &amp; GPU/CPU profiling</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 85%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-vr-cardboard"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>VR Development</h4>
-                                <p>Interaction systems &amp; multi-platform comfort</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 80%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-palette"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>PixiJS &amp; HTML5 Canvas</h4>
-                                <p>Browser rendering pipelines &amp; WebGL games</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 80%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Backend & Systems -->
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="category-title">
-                        <i class="fas fa-server"></i>
-                        Backend &amp; Systems
-                    </h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Node.js &amp; REST APIs</h4>
-                                <p>Service boundaries, workers &amp; job queues</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 85%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-docker"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Docker &amp; CI/CD</h4>
-                                <p>Containerized deploys &amp; GitHub Actions pipelines</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 80%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>MongoDB &amp; SQL</h4>
-                                <p>Schema design, indexing &amp; performance tuning</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 80%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Applied AI / ML Serving</h4>
-                                <p>Fine-tuned models on GPU, vector search &amp; LLM tagging</p>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="--progress: 75%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Languages -->
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="category-title">
-                        <i class="fas fa-code"></i>
-                        Languages
-                    </h3>
-                    <div class="tools-grid">
-                        <div class="tool-item">
-                            <i class="fas fa-hashtag"></i>
-                            <span>C#</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fas fa-plus"></i>
-                            <span>C++</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fas fa-file-code"></i>
-                            <span>TypeScript</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Practices & Tools -->
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="category-title">
-                        <i class="fas fa-tools"></i>
-                        Practices &amp; Tools
-                    </h3>
-                    <div class="tools-grid">
-                        <div class="tool-item">
-                            <i class="fas fa-sitemap"></i>
-                            <span>OOP</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fas fa-arrows-rotate"></i>
-                            <span>Agile / Scrum</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fab fa-jira"></i>
-                            <span>Jira</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Actions</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>Perforce</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fas fa-code"></i>
-                            <span>VS Code</span>
-                        </div>
-                        <div class="tool-item">
-                            <i class="fab fa-figma"></i>
-                            <span>Figma</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">Let's discuss your next project or opportunity</p>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
-                    <h3>Contact Information</h3>
-                    <p>Feel free to reach out through any of the following channels. I'm always open to discussing new projects and creative opportunities.</p>
-
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-location-dot"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Ankara, Türkiye</span>
-                            </div>
-                        </div>
-
-                        <a href="tel:+905535436749" class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Phone</span>
-                                <span class="contact-value">+90 553 543 6749</span>
-                            </div>
-                        </a>
-
-                        <a href="mailto:ilhanbahadiryavas@gmail.com" class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">ilhanbahadiryavas@gmail.com</span>
-                            </div>
-                        </a>
-
-                        <a href="https://linkedin.com/in/bahoyvs" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">LinkedIn</span>
-                                <span class="contact-value">linkedin.com/in/ilhan-bahadır-yavaş/</span>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/bahoyvs" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">GitHub</span>
-                                <span class="contact-value">github.com/bahoyvs</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
-                    <form class="contact-form" id="contact-form" action="mailto:ilhanbahadiryavas@gmail.com" method="POST" enctype="text/plain">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="footer-logo">IBY</span>
-                    <p>Software engineer and game developer &mdash; gameplay systems, multiplayer networking, and the backends behind them.</p>
-                </div>
-
-                <div class="footer-social">
-                    <a href="https://linkedin.com/in/bahoyvs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/bahoyvs" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:ilhanbahadiryavas@gmail.com" aria-label="Send Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 İlhan Bahadır Yavaş. All rights reserved.</p>
-            </div>
-        </div>
-
-        <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-            <i class="fas fa-chevron-up"></i>
-        </button>
-    </footer>
-
-    <!-- Project Modals -->
-    <div class="modal" id="project-modal">
-        <div class="modal-overlay" id="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modal-close" aria-label="Close modal">
-                <i class="fas fa-times"></i>
-            </button>
-
-            <div class="modal-body" id="modal-body">
-                <!-- Modal content will be dynamically inserted -->
-            </div>
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" hidden>
+        <ul class="nav-drawer-list">
+            <li><a href="#home" class="nav-drawer-link">Home</a></li>
+            <li><a href="#projects" class="nav-drawer-link">Projects</a></li>
+            <li><a href="#experience" class="nav-drawer-link">Experience</a></li>
+            <li><a href="#about" class="nav-drawer-link">About</a></li>
+            <li><a href="#skills" class="nav-drawer-link">Skills</a></li>
+            <li><a href="#contact" class="nav-drawer-link">Contact</a></li>
+        </ul>
+        <div class="nav-drawer-foot">
+            <a class="btn btn-primary btn-block" href="assets/cv.pdf" download>Download CV</a>
         </div>
     </div>
 
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <main id="main">
 
-    <!-- Custom Scripts -->
-    <script src="scripts.js"></script>
+    <!-- ==================== Hero ==================== -->
+    <section class="hero" id="home">
+        <!-- Real-time WebGL field. Falls back to the CSS gradient painted on .hero-canvas-wrap. -->
+        <div class="hero-canvas-wrap" aria-hidden="true">
+            <canvas class="hero-canvas" id="hero-canvas"></canvas>
+            <div class="hero-canvas-fade"></div>
+        </div>
+
+        <div class="shell hero-shell">
+            <div class="hero-copy">
+                <p class="status-badge">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Available for opportunities
+                </p>
+
+                <h1 class="hero-title">
+                    <span class="hero-name">İlhan Bahadır&nbsp;Yavaş</span>
+                    <span class="hero-role">Software Engineer</span>
+                </h1>
+
+                <p class="hero-lede">
+                    I design gameplay systems, multiplayer netcode, and the containerized backends
+                    that keep them running in production.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#contact">Get in Touch</a>
+                    <a class="btn btn-ghost" href="assets/cv.pdf" download>Download CV</a>
+                    <span class="hero-icon-links">
+                        <a class="icon-link" href="https://github.com/bahoyvs" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .5Z"/></svg>
+                        </a>
+                        <a class="icon-link" href="https://linkedin.com/in/bahoyvs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <figure class="hero-figure">
+                <img class="hero-portrait"
+                     src="assets/images/bahopicture-1256x1671.jpeg"
+                     alt="Portrait of İlhan Bahadır Yavaş"
+                     width="1256" height="1671"
+                     fetchpriority="high" decoding="async">
+                <figcaption class="hero-figcaption">
+                    <span>Ankara, Türkiye</span>
+                    <span class="hero-figcaption-sep" aria-hidden="true"></span>
+                    <span>B.S. Information Systems &amp; Technologies, Bilkent 2026</span>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ==================== Featured Projects ==================== -->
+    <section class="section" id="projects">
+        <div class="shell">
+            <header class="section-head reveal">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-lede">Production backends, IoT systems, gameplay architecture, and shipped browser games.</p>
+            </header>
+
+            <!-- Six-column grid. Rows must sum to 6: wide=4, half=3, narrow=2, full=6.
+                 Current rhythm is 4+2, 2+4, 6. Each .work-visual panel is ready to be
+                 swapped for a real screenshot using .work-visual-image (see readme). -->
+            <div class="work-grid">
+
+                <!-- 1 -->
+                <article class="work-card work-card-wide reveal" data-spotlight>
+                    <div class="work-visual work-visual-b">
+                        <p class="work-award">
+                            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 9.2 7.6 3 8.5l4.5 4.4L6.4 19 12 16.1 17.6 19l-1.1-6.1L21 8.5l-6.2-.9L12 2Z"/></svg>
+                            Best Senior Project, CTIS Awards 2026
+                        </p>
+                    </div>
+                    <div class="work-body">
+                        <p class="work-kicker">DevOps Engineer &amp; Scrum Master <span aria-hidden="true">/</span> 2025 to 2026</p>
+                        <h3 class="work-title">Bubbles</h3>
+                        <p class="work-desc">
+                            An AI-powered Turkish news platform: containerized microservices on
+                            Railway, a Redis job pipeline, and fine-tuned models served on GPU.
+                        </p>
+                        <ul class="tag-row">
+                            <li class="tag">Docker</li>
+                            <li class="tag">Railway</li>
+                            <li class="tag">GitHub Actions</li>
+                            <li class="tag">Redis + BullMQ</li>
+                            <li class="tag">MongoDB Atlas</li>
+                            <li class="tag">Qdrant</li>
+                        </ul>
+                        <button class="work-link" type="button" data-project="bubbles">
+                            Show Details
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article class="work-card work-card-narrow reveal" data-spotlight>
+                    <div class="work-visual work-visual-a">
+                        <p class="work-metric"><strong>4</strong><span>player co-op</span></p>
+                        <p class="work-metric"><strong>8</strong><span>playable heroes</span></p>
+                    </div>
+                    <div class="work-body">
+                        <p class="work-kicker">Systems Programmer <span aria-hidden="true">/</span> 2024 to 2026</p>
+                        <h3 class="work-title">Project C-Building</h3>
+                        <p class="work-desc">
+                            An action roguelite built on a data-driven ability pipeline that
+                            decouples composition from hero logic.
+                        </p>
+                        <ul class="tag-row">
+                            <li class="tag">Unity</li>
+                            <li class="tag">C#</li>
+                            <li class="tag">Netcode for GameObjects</li>
+                        </ul>
+                        <button class="work-link" type="button" data-project="c-building">
+                            Show Details
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 3 -->
+                <article class="work-card work-card-narrow reveal" data-spotlight>
+                    <div class="work-visual work-visual-c">
+                        <p class="work-metric"><strong>DAG canvas</strong><span>multi-parent dialogue nodes</span></p>
+                    </div>
+                    <div class="work-body">
+                        <p class="work-kicker">Fullstack Engineer <span aria-hidden="true">/</span> 2026</p>
+                        <h3 class="work-title">BranchGPT Client</h3>
+                        <p class="work-desc">
+                            A web client that renders branched AI conversations as an interactive
+                            timeline, with swappable LLM backends.
+                        </p>
+                        <ul class="tag-row">
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">React</li>
+                            <li class="tag">React Flow</li>
+                        </ul>
+                        <button class="work-link" type="button" data-project="branchgpt">
+                            Show Details
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 4 -->
+                <article class="work-card work-card-wide reveal" data-spotlight>
+                    <div class="work-visual work-visual-d">
+                        <p class="work-metric"><strong>Raspberry Pi 5</strong><span>always-on Linux node</span></p>
+                        <p class="work-metric"><strong>Zigbee + MQTT</strong><span>sensor mesh and pub/sub</span></p>
+                    </div>
+                    <div class="work-body">
+                        <p class="work-kicker">Systems &amp; Embedded Developer <span aria-hidden="true">/</span> 2025 to 2026</p>
+                        <h3 class="work-title">Home Assistant IoT Automation</h3>
+                        <p class="work-desc">
+                            A continuously running Linux IoT controller wiring edge hardware into
+                            context-aware automations with local LLM output.
+                        </p>
+                        <ul class="tag-row">
+                            <li class="tag">Home Assistant OS</li>
+                            <li class="tag">MQTT</li>
+                            <li class="tag">Node-RED</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">Tailscale VPN</li>
+                        </ul>
+                        <button class="work-link" type="button" data-project="home-assistant">
+                            Show Details
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 5. Collection card. Two shipped titles under one heading, so it takes
+                     the full row and splits internally instead of using a visual panel. -->
+                <article class="work-card work-card-full work-card-collection reveal" data-spotlight>
+                    <div class="collection-intro">
+                        <p class="work-kicker">Solo Developer <span aria-hidden="true">/</span> Published on CrazyGames</p>
+                        <h3 class="work-title">CrazyGames Titles</h3>
+                        <p class="work-desc">
+                            Two browser games shipped end to end, both built around a strict frame
+                            budget: hundreds of live entities in one, integrated water physics in
+                            the other.
+                        </p>
+                        <ul class="tag-row">
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">Canvas</li>
+                            <li class="tag">Vector Math</li>
+                        </ul>
+                    </div>
+
+                    <div class="game-tile">
+                        <div class="game-tile-visual work-visual-e">
+                            <p class="work-metric"><strong>100s</strong><span>of entities, no frame drops</span></p>
+                        </div>
+                        <div class="game-tile-body">
+                            <h4 class="game-tile-title">BloomWake</h4>
+                            <p class="game-tile-desc">
+                                A bounded-swarm survivor arena held at budget through object pooling
+                                and spatial partitioning.
+                            </p>
+                            <button class="work-link" type="button" data-project="bloomwake">
+                                Show Details
+                                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-tile">
+                        <div class="game-tile-visual work-visual-f">
+                            <p class="work-metric"><strong>Water physics</strong><span>buoyancy, drag and momentum</span></p>
+                        </div>
+                        <div class="game-tile-body">
+                            <h4 class="game-tile-title">AeroDrop</h4>
+                            <p class="game-tile-desc">
+                                A cell-growing game where movement cost scales with the mass you
+                                have absorbed.
+                            </p>
+                            <button class="work-link" type="button" data-project="aerodrop">
+                                Show Details
+                                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Experience ==================== -->
+    <section class="section section-alt" id="experience">
+        <div class="shell">
+            <header class="section-head reveal">
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-lede">Production software in game and enterprise teams.</p>
+            </header>
+
+            <ol class="rail">
+                <li class="rail-item reveal">
+                    <div class="rail-marker" aria-hidden="true"></div>
+                    <div class="rail-when">
+                        <span class="rail-date">Jan 2025 <span aria-hidden="true">-</span> May 2025</span>
+                        <span class="chip">Full-Time</span>
+                    </div>
+                    <div class="rail-what">
+                        <h3 class="rail-role">Unreal Engine Game Developer</h3>
+                        <p class="rail-org">INFINIA Engineering, Ankara</p>
+                        <ul class="rail-points">
+                            <li>Built immersive VR and 3D interactive environments in Unreal Engine 5 and C++.</li>
+                            <li>Implemented gameplay logic, event triggers, and custom blueprint systems for advanced interactivity.</li>
+                            <li>Shipped a room-scale hidden object experience where physical devices drive in-game events over MQTT, with a defined topic schema, JSON payloads, and debounce logic.</li>
+                        </ul>
+                        <ul class="tag-row">
+                            <li class="tag">Unreal Engine 5</li>
+                            <li class="tag">C++</li>
+                            <li class="tag">Blueprints</li>
+                            <li class="tag">MQTT</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="rail-item reveal">
+                    <div class="rail-marker" aria-hidden="true"></div>
+                    <div class="rail-when">
+                        <span class="rail-date">Sep 2024 <span aria-hidden="true">-</span> Jan 2025</span>
+                        <span class="chip">Part-Time</span>
+                    </div>
+                    <div class="rail-what">
+                        <h3 class="rail-role">Unreal Engine Game Developer</h3>
+                        <p class="rail-org">INFINIA Engineering, Ankara</p>
+                        <ul class="rail-points">
+                            <li>Focused on VR object interaction systems and environment optimization across multiple headsets.</li>
+                            <li>Worked with 3D artists and designers to implement visual storytelling inside Unreal Engine.</li>
+                            <li>Built a VR showroom on the UE5 VR template with modular grab and trace components, teleport and snap-turn locomotion, and Lumen, Nanite and LOD profiling passes.</li>
+                        </ul>
+                        <ul class="tag-row">
+                            <li class="tag">VR</li>
+                            <li class="tag">Lumen</li>
+                            <li class="tag">Nanite</li>
+                            <li class="tag">Profiling</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="rail-item reveal">
+                    <div class="rail-marker" aria-hidden="true"></div>
+                    <div class="rail-when">
+                        <span class="rail-date">Jul 2024 <span aria-hidden="true">-</span> Aug 2024</span>
+                        <span class="chip">Internship</span>
+                    </div>
+                    <div class="rail-what">
+                        <h3 class="rail-role">Unreal Engine Game Developer Intern</h3>
+                        <p class="rail-org">INFINIA Engineering, Ankara</p>
+                        <ul class="rail-points">
+                            <li>Developed gameplay systems, level blueprints, and interactive UI elements.</li>
+                            <li>Gained hands-on experience in 3D model integration and performance optimization.</li>
+                            <li>Learned collaboration practices for a production engine codebase.</li>
+                        </ul>
+                        <ul class="tag-row">
+                            <li class="tag">Unreal Engine 5</li>
+                            <li class="tag">Blueprints</li>
+                            <li class="tag">UI</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="rail-item reveal">
+                    <div class="rail-marker" aria-hidden="true"></div>
+                    <div class="rail-when">
+                        <span class="rail-date">Jun 2024 <span aria-hidden="true">-</span> Jul 2024</span>
+                        <span class="chip">Internship</span>
+                    </div>
+                    <div class="rail-what">
+                        <h3 class="rail-role">Intern Student</h3>
+                        <p class="rail-org">BTC Bilişim Hizmetleri, İstanbul</p>
+                        <ul class="rail-points">
+                            <li>Worked on SQL-based data operations and SAP ERP systems.</li>
+                            <li>Wrote and optimized SQL queries and built operational reports for internal business units.</li>
+                            <li>Contributed to database design and improved internal workflows through ERP functionality.</li>
+                        </ul>
+                        <ul class="tag-row">
+                            <li class="tag">SQL</li>
+                            <li class="tag">SAP ERP</li>
+                            <li class="tag">Database Design</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ==================== About ==================== -->
+    <section class="section" id="about">
+        <div class="shell">
+            <header class="section-head reveal">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-lede">The engineer behind the projects.</p>
+            </header>
+
+            <div class="about-prose reveal">
+                <p>
+                    I am a software engineer with a strong foundation in C#, C++, and object-oriented
+                    design. I build interactive gameplay mechanics, optimize game loops, and design
+                    multiplayer network architectures in Unity and Unreal Engine. I am equally at home
+                    on the backend, where containerized services, job queues, and databases keep those
+                    products running.
+                </p>
+                <p>
+                    I prototype quickly for 2D and 3D games, work in Agile and Scrum teams, and care
+                    about clean, scalable code in dynamic environments. Most recently I led the backend
+                    and the Scrum process for an AI-powered news platform that won Best Senior Project
+                    at the CTIS Awards 2026.
+                </p>
+            </div>
+
+            <dl class="fact-grid">
+                <div class="fact reveal">
+                    <dt>Education</dt>
+                    <dd>
+                        Ankara İhsan Doğramacı Bilkent University
+                        <span class="fact-note">Information Systems and Technologies, 2021 to 2026</span>
+                    </dd>
+                </div>
+                <div class="fact reveal">
+                    <dt>Awards</dt>
+                    <dd>
+                        Best Senior Project, System Development Award, CTIS Awards 2026
+                        <span class="fact-note">Best Presentation, Startup Studio Demo Day 2026</span>
+                    </dd>
+                </div>
+                <div class="fact reveal">
+                    <dt>Languages</dt>
+                    <dd>
+                        Turkish, native
+                        <span class="fact-note">English, upper intermediate</span>
+                    </dd>
+                </div>
+                <div class="fact reveal">
+                    <dt>Interests</dt>
+                    <dd>
+                        Game design and artificial intelligence
+                        <span class="fact-note">Mathematics, basketball, travel</span>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </section>
+
+    <!-- ==================== Tech Stack ==================== -->
+    <section class="section section-alt" id="skills">
+        <div class="shell">
+            <header class="section-head reveal">
+                <h2 class="section-title">Tech Stack</h2>
+                <p class="section-lede">Filter by discipline, or browse the whole stack.</p>
+            </header>
+
+            <div class="stack reveal">
+                <div class="stack-tabs" role="tablist" aria-label="Filter the tech stack by discipline">
+                    <button class="stack-tab is-active" type="button" role="tab" id="tab-all"
+                            aria-selected="true" aria-controls="stack-panel" data-filter="all">All</button>
+                    <button class="stack-tab" type="button" role="tab" id="tab-systems" tabindex="-1"
+                            aria-selected="false" aria-controls="stack-panel" data-filter="systems">Systems &amp; Engines</button>
+                    <button class="stack-tab" type="button" role="tab" id="tab-backend" tabindex="-1"
+                            aria-selected="false" aria-controls="stack-panel" data-filter="backend">Backend</button>
+                    <button class="stack-tab" type="button" role="tab" id="tab-devops" tabindex="-1"
+                            aria-selected="false" aria-controls="stack-panel" data-filter="devops">DevOps</button>
+                    <button class="stack-tab" type="button" role="tab" id="tab-web" tabindex="-1"
+                            aria-selected="false" aria-controls="stack-panel" data-filter="web">Web</button>
+                </div>
+
+                <div class="stack-panel" id="stack-panel" role="tabpanel" aria-labelledby="tab-all" tabindex="0">
+                    <p class="stack-count" id="stack-count" aria-live="polite">Showing all 48 technologies</p>
+
+                    <ul class="stack-cloud" id="stack-cloud">
+                        <li class="stack-item" data-cat="systems">Unity</li>
+                        <li class="stack-item" data-cat="systems">Unreal Engine 5</li>
+                        <li class="stack-item" data-cat="systems">C#</li>
+                        <li class="stack-item" data-cat="systems">C++</li>
+                        <li class="stack-item" data-cat="systems">Netcode for GameObjects</li>
+                        <li class="stack-item" data-cat="systems">UGS Relay &amp; Lobby</li>
+                        <li class="stack-item" data-cat="systems">Blueprints</li>
+                        <li class="stack-item" data-cat="systems">Behavior Trees</li>
+                        <li class="stack-item" data-cat="systems">NavMesh &amp; EQS</li>
+                        <li class="stack-item" data-cat="systems">URP</li>
+                        <li class="stack-item" data-cat="systems">Lumen &amp; Nanite</li>
+                        <li class="stack-item" data-cat="systems">VR Interaction</li>
+                        <li class="stack-item" data-cat="systems">ScriptableObject Composition</li>
+                        <li class="stack-item" data-cat="systems">Performance Profiling</li>
+                        <li class="stack-item" data-cat="systems">MQTT</li>
+                        <li class="stack-item" data-cat="systems">Raspberry Pi</li>
+                        <li class="stack-item" data-cat="systems">Node-RED</li>
+
+                        <li class="stack-item" data-cat="backend">Node.js</li>
+                        <li class="stack-item" data-cat="backend">REST APIs</li>
+                        <li class="stack-item" data-cat="backend">MongoDB Atlas</li>
+                        <li class="stack-item" data-cat="backend">SQL</li>
+                        <li class="stack-item" data-cat="backend">Redis</li>
+                        <li class="stack-item" data-cat="backend">BullMQ</li>
+                        <li class="stack-item" data-cat="backend">Qdrant</li>
+                        <li class="stack-item" data-cat="backend">PM2</li>
+                        <li class="stack-item" data-cat="backend">Python</li>
+                        <li class="stack-item" data-cat="backend">Java</li>
+                        <li class="stack-item" data-cat="backend">SAP ERP</li>
+
+                        <li class="stack-item" data-cat="devops">Docker</li>
+                        <li class="stack-item" data-cat="devops">GitHub Actions</li>
+                        <li class="stack-item" data-cat="devops">CI/CD</li>
+                        <li class="stack-item" data-cat="devops">Railway</li>
+                        <li class="stack-item" data-cat="devops">Modal Labs GPU</li>
+                        <li class="stack-item" data-cat="devops">Uptime Monitoring</li>
+                        <li class="stack-item" data-cat="devops">Git</li>
+                        <li class="stack-item" data-cat="devops">Perforce</li>
+                        <li class="stack-item" data-cat="devops">Jira &amp; Scrum</li>
+                        <li class="stack-item" data-cat="devops">Linux</li>
+                        <li class="stack-item" data-cat="devops">Tailscale VPN</li>
+
+                        <li class="stack-item" data-cat="web">TypeScript</li>
+                        <li class="stack-item" data-cat="web">JavaScript</li>
+                        <li class="stack-item" data-cat="web">PixiJS</li>
+                        <li class="stack-item" data-cat="web">HTML5 Canvas</li>
+                        <li class="stack-item" data-cat="web">WebGL</li>
+                        <li class="stack-item" data-cat="web">React</li>
+                        <li class="stack-item" data-cat="web">React Flow</li>
+                        <li class="stack-item" data-cat="web">Next.js</li>
+                        <li class="stack-item" data-cat="web">Figma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ==================== Contact / Footer ==================== -->
+    <footer class="footer" id="contact">
+        <div class="shell">
+            <div class="footer-top">
+                <h2 class="footer-title">Let&rsquo;s build something.</h2>
+                <p class="footer-lede">
+                    Open to software engineering roles in systems, backend, and game teams.
+                    The fastest way to reach me is email.
+                </p>
+
+                <div class="copy-field">
+                    <span class="copy-value" id="copy-value" translate="no">ilhanbahadiryavas@gmail.com</span>
+                    <button class="copy-btn" type="button" id="copy-btn" data-copy="ilhanbahadiryavas@gmail.com">
+                        <span class="copy-btn-label" id="copy-btn-label">Copy Email</span>
+                    </button>
+                </div>
+                <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+            </div>
+
+            <div class="footer-links">
+                <a class="footer-link" href="mailto:ilhanbahadiryavas@gmail.com">Email</a>
+                <a class="footer-link" href="https://github.com/bahoyvs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="footer-link" href="https://linkedin.com/in/bahoyvs" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="footer-link" href="tel:+905535436749">+90&nbsp;553&nbsp;543&nbsp;6749</a>
+                <a class="footer-link" href="assets/cv.pdf" download>CV</a>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-brand-mark" aria-hidden="true">IBY</span>
+                <p class="footer-copy">&copy; 2026 İlhan Bahadır Yavaş. Ankara, Türkiye.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="to-top" type="button" aria-label="Back to Top" hidden>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-7 7 7-7 7 7"/></svg>
+    </button>
+
+    <!-- ==================== Project Modal ==================== -->
+    <div class="modal" id="project-modal" hidden>
+        <div class="modal-scrim" id="modal-scrim"></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Close Dialog">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js" defer></script>
 </body>
 </html>
