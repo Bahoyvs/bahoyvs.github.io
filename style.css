@@ -587,6 +587,7 @@ p { text-wrap: pretty; }
 .work-card-wide   { grid-column: span 4; }
 .work-card-narrow { grid-column: span 2; }
 .work-card-half   { grid-column: span 3; }
+.work-card-full   { grid-column: span 6; }
 
 .work-card {
     position: relative;
@@ -771,6 +772,69 @@ p { text-wrap: pretty; }
 .work-link-row .work-link { margin-top: 0; }
 .work-link-alt { color: var(--text-muted); }
 .work-link-alt:hover { color: var(--text); }
+
+/* --------------------------------------------------------------------------
+   Collection card: several shipped titles under one heading. Takes the full
+   row and splits internally, so it reads as a group rather than as one more
+   card in the sequence.
+   -------------------------------------------------------------------------- */
+
+.work-card-collection {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+}
+
+.collection-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 30px;
+    min-width: 0;
+    border-right: 1px solid var(--line);
+    background:
+        radial-gradient(120% 130% at 0% 0%, rgba(168, 226, 76, 0.06), transparent 58%),
+        var(--surface);
+}
+.collection-intro .work-desc { margin-bottom: 4px; }
+
+.game-tile {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: var(--bg-raise);
+}
+.game-tile + .game-tile { border-left: 1px solid var(--line); }
+
+.game-tile-visual {
+    display: flex;
+    align-items: flex-end;
+    min-height: 132px;
+    padding: 22px;
+    border-bottom: 1px solid var(--line);
+}
+
+.game-tile-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    padding: 22px;
+    min-width: 0;
+}
+
+.game-tile-title {
+    font-size: 1.16rem;
+    font-weight: 600;
+    letter-spacing: -0.028em;
+}
+
+.game-tile-desc {
+    font-size: 0.92rem;
+    line-height: 1.58;
+    color: var(--text-muted);
+    overflow-wrap: break-word;
+}
 
 /* ==========================================================================
    Experience rail
@@ -1323,9 +1387,17 @@ p { text-wrap: pretty; }
 
     .work-card-wide,
     .work-card-narrow,
-    .work-card-half { grid-column: span 6; }
+    .work-card-half,
+    .work-card-full { grid-column: span 6; }
     .work-card-narrow { grid-column: span 3; }
     .work-card-half { grid-column: span 3; }
+
+    .work-card-collection { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .collection-intro {
+        grid-column: 1 / -1;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
 
     .rail-item { grid-template-columns: minmax(0, 1fr); gap: 16px; }
     .rail-when { flex-direction: row; align-items: center; gap: 12px; }
@@ -1358,9 +1430,16 @@ p { text-wrap: pretty; }
     .work-grid { gap: 16px; }
     .work-card-wide,
     .work-card-narrow,
-    .work-card-half { grid-column: span 6; }
+    .work-card-half,
+    .work-card-full { grid-column: span 6; }
     .work-visual { min-height: 140px; padding: 20px; gap: 20px; }
     .work-body { padding: 20px; }
+
+    .work-card-collection { grid-template-columns: minmax(0, 1fr); }
+    .collection-intro { padding: 20px; }
+    .game-tile + .game-tile { border-left: 0; border-top: 1px solid var(--line); }
+    .game-tile-visual { min-height: 112px; padding: 20px; }
+    .game-tile-body { padding: 20px; }
 
     .rail::before { display: none; }
     .rail-item { padding: 26px 0; padding-left: 0; }

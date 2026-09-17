@@ -32,7 +32,7 @@
         'c-building': {
             title: 'Project C-Building',
             subtitle: 'Co-op Isometric Action Roguelite',
-            kicker: 'Unity / Systems Programmer',
+            kicker: 'Systems Programmer / 2024 to 2026',
             description: 'A 4-player co-op isometric action roguelite built in Unity, spanning 5 distinct biomes and a hero roster of 8 playable characters with fully composable ability kits.',
             features: [
                 'Architected a data-driven combat framework (ComposedAbilitySO pipeline) replacing hardcoded per-hero logic, letting designers compose abilities from reusable Effect and Delivery primitives while preserving hooks for bespoke hero mechanics.',
@@ -46,7 +46,7 @@
         'bubbles': {
             title: 'Bubbles',
             subtitle: 'AI-Powered Turkish News Platform',
-            kicker: 'Senior Capstone / Backend Lead and Scrum Master',
+            kicker: 'DevOps Engineer and Scrum Master / 2025 to 2026',
             awards: [
                 'Best Senior Project, System Development Award, CTIS Awards 2026',
                 'Best Presentation, Startup Studio Demo Day 2026'
@@ -59,12 +59,36 @@
                 'Managed MongoDB Atlas indexing, TTL policies and performance tuning, alongside a Qdrant vector database powering multilingual semantic search.',
                 'Integrated AI into production: a fine-tuned mBART Turkish summarizer plus political and writing perspective-score models served on Modal Labs GPUs, with LLM taggers for enrichment.'
             ],
-            technologies: ['Node.js', 'Docker', 'MongoDB Atlas', 'Qdrant', 'Redis + BullMQ', 'Modal Labs GPU', 'GitHub Actions', 'PM2']
+            technologies: ['Node.js', 'Next.js', 'Docker', 'Railway', 'MongoDB Atlas', 'Qdrant', 'Redis + BullMQ', 'Modal Labs GPU', 'GitHub Actions', 'PM2']
+        },
+        'branchgpt': {
+            title: 'BranchGPT Client',
+            subtitle: 'Visual Conversation Timeline',
+            kicker: 'Fullstack Engineer / 2026',
+            description: 'A web client that renders branched AI conversations as an interactive timeline, where each node can have multiple parents.',
+            features: [
+                'Built an interactive DAG graph canvas using React Flow to visualize non-linear, multi-parent LLM dialogue trees.',
+                'Implemented efficient state management and lazy loading for large conversation trees, with metadata inspection panels.',
+                'Designed a pluggable interface to swap LLM backends and enforce context-building rules before each API call.'
+            ],
+            technologies: ['TypeScript', 'React', 'React Flow', 'Node APIs']
+        },
+        'home-assistant': {
+            title: 'Home Assistant IoT Automation',
+            subtitle: 'IoT Controller and AI Agent',
+            kicker: 'Systems and Embedded Developer / 2025 to 2026',
+            description: 'A continuously running Linux IoT controller that integrates edge hardware over MQTT and drives context-aware automations.',
+            features: [
+                'Deployed a high-availability Raspberry Pi 5 Home Assistant OS node managing Zigbee sensors and MQTT pub/sub brokers.',
+                'Orchestrated Node-RED flows combining environmental sensor context with local LLM outputs, enforcing rate limits, retries and safety guardrails.',
+                'Configured encrypted remote overlay networking using Tailscale VPN and modular YAML automation architectures.'
+            ],
+            technologies: ['Raspberry Pi 5', 'Home Assistant OS', 'MQTT', 'Node-RED', 'Python', 'Tailscale VPN', 'Linux']
         },
         'bloomwake': {
             title: 'BloomWake',
             subtitle: 'Browser-Based Swarm Survivor',
-            kicker: 'CrazyGames / Solo Developer',
+            kicker: 'CrazyGames Titles / Solo Developer',
             description: 'A high-performance bounded-swarm survivor game for the browser, engineered so that hundreds of simultaneous on-screen entities never cost the frame budget.',
             features: [
                 'Optimized rendering path that keeps hundreds of concurrent enemies on screen without frame drops.',
@@ -77,7 +101,7 @@
         'aerodrop': {
             title: 'AeroDrop',
             subtitle: 'Physics-Based Cell-Growing Game',
-            kicker: 'CrazyGames / Solo Developer',
+            kicker: 'CrazyGames Titles / Solo Developer',
             description: 'A physics-driven browser game where the player grows by absorbing mass, built around integrated water physics and a movement system whose cost scales with size.',
             features: [
                 'Integrated water physics simulation driving buoyancy, drag and momentum.',
@@ -86,34 +110,6 @@
                 'Vector-math driven collision and absorption rules tuned for readable feedback.'
             ],
             technologies: ['TypeScript', 'JavaScript', 'Canvas/WebGL', 'Vector Math', 'Bot AI']
-        },
-        'not-enough-mana': {
-            title: 'Not Enough Mana',
-            subtitle: '2D Browser Card Game',
-            kicker: 'PixiJS / Solo Developer',
-            description: 'A 2D browser-based card game developed from scratch in PixiJS, with its own rendering pipeline, asset management and turn-based state logic.',
-            features: [
-                'Modular graphics rendering pipeline built directly on PixiJS and HTML5 Canvas.',
-                'Custom asset management layer handling loading, atlases and runtime lookup.',
-                'Robust turn-based game state machine covering draw, play, resolve and end-turn phases.',
-                'Data-driven card definitions, so new cards are content rather than code.'
-            ],
-            technologies: ['PixiJS', 'HTML5 Canvas', 'JavaScript', 'Game State Management']
-        },
-        'zombie-survival': {
-            title: 'Zombie Survival',
-            subtitle: 'Unreal Engine 5 Co-op Prototype',
-            kicker: 'Unreal Engine 5 / Solo Developer',
-            video: 'https://youtu.be/PsBm4uJqYyc',
-            description: 'A cooperative survival loop prototype featuring round pacing, resource pressure, and health and damage feedback including screen shake, post-process effects and audio cues.',
-            features: [
-                'Enemy AI authored with Behavior Trees and the Environment Query System.',
-                'NavMesh integration with spawn timer and aggro tuning for balanced difficulty.',
-                'Scalable Blueprint systems for pickups, combat and inventory management.',
-                'Level blockouts designed for player flow, choke points and sight lines.',
-                'Debug tooling including on-screen counters for real-time gameplay analysis.'
-            ],
-            technologies: ['UE5', 'Blueprints', 'Behavior Trees', 'NavMesh', 'EQS', 'DataTables', 'Perception']
         }
     };
 

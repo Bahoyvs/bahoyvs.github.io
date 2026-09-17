@@ -141,41 +141,16 @@
         <div class="shell">
             <header class="section-head reveal">
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-lede">Shipped gameplay systems, multiplayer architecture, and production backends.</p>
+                <p class="section-lede">Production backends, IoT systems, gameplay architecture, and shipped browser games.</p>
             </header>
 
+            <!-- Six-column grid. Rows must sum to 6: wide=4, half=3, narrow=2, full=6.
+                 Current rhythm is 4+2, 2+4, 6. Each .work-visual panel is ready to be
+                 swapped for a real screenshot using .work-visual-image (see readme). -->
             <div class="work-grid">
 
                 <!-- 1 -->
                 <article class="work-card work-card-wide reveal" data-spotlight>
-                    <div class="work-visual work-visual-a">
-                        <p class="work-metric"><strong>4</strong><span>player co-op</span></p>
-                        <p class="work-metric"><strong>5</strong><span>biomes</span></p>
-                        <p class="work-metric"><strong>8</strong><span>playable heroes</span></p>
-                    </div>
-                    <div class="work-body">
-                        <p class="work-kicker">Unity <span aria-hidden="true">/</span> Systems Programmer</p>
-                        <h3 class="work-title">Project C-Building</h3>
-                        <p class="work-desc">
-                            An isometric action roguelite built on a data-driven ability framework
-                            and Unity Netcode for GameObjects.
-                        </p>
-                        <ul class="tag-row">
-                            <li class="tag">Unity</li>
-                            <li class="tag">C#</li>
-                            <li class="tag">Netcode for GameObjects</li>
-                            <li class="tag">UGS Relay</li>
-                            <li class="tag">URP</li>
-                        </ul>
-                        <button class="work-link" type="button" data-project="c-building">
-                            Show Details
-                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- 2 -->
-                <article class="work-card work-card-narrow work-card-accent reveal" data-spotlight>
                     <div class="work-visual work-visual-b">
                         <p class="work-award">
                             <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 9.2 7.6 3 8.5l4.5 4.4L6.4 19 12 16.1 17.6 19l-1.1-6.1L21 8.5l-6.2-.9L12 2Z"/></svg>
@@ -183,20 +158,46 @@
                         </p>
                     </div>
                     <div class="work-body">
-                        <p class="work-kicker">Capstone <span aria-hidden="true">/</span> Backend Lead</p>
+                        <p class="work-kicker">DevOps Engineer &amp; Scrum Master <span aria-hidden="true">/</span> 2025 to 2026</p>
                         <h3 class="work-title">Bubbles</h3>
                         <p class="work-desc">
-                            An AI-powered Turkish news platform: containerized microservices, a Redis
-                            job pipeline, and fine-tuned models served on GPU.
+                            An AI-powered Turkish news platform: containerized microservices on
+                            Railway, a Redis job pipeline, and fine-tuned models served on GPU.
                         </p>
                         <ul class="tag-row">
-                            <li class="tag">Node.js</li>
                             <li class="tag">Docker</li>
-                            <li class="tag">MongoDB</li>
+                            <li class="tag">Railway</li>
+                            <li class="tag">GitHub Actions</li>
+                            <li class="tag">Redis + BullMQ</li>
+                            <li class="tag">MongoDB Atlas</li>
                             <li class="tag">Qdrant</li>
-                            <li class="tag">BullMQ</li>
                         </ul>
                         <button class="work-link" type="button" data-project="bubbles">
+                            Show Details
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article class="work-card work-card-narrow reveal" data-spotlight>
+                    <div class="work-visual work-visual-a">
+                        <p class="work-metric"><strong>4</strong><span>player co-op</span></p>
+                        <p class="work-metric"><strong>8</strong><span>playable heroes</span></p>
+                    </div>
+                    <div class="work-body">
+                        <p class="work-kicker">Systems Programmer <span aria-hidden="true">/</span> 2024 to 2026</p>
+                        <h3 class="work-title">Project C-Building</h3>
+                        <p class="work-desc">
+                            An action roguelite built on a data-driven ability pipeline that
+                            decouples composition from hero logic.
+                        </p>
+                        <ul class="tag-row">
+                            <li class="tag">Unity</li>
+                            <li class="tag">C#</li>
+                            <li class="tag">Netcode for GameObjects</li>
+                        </ul>
+                        <button class="work-link" type="button" data-project="c-building">
                             Show Details
                             <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
                         </button>
@@ -206,22 +207,21 @@
                 <!-- 3 -->
                 <article class="work-card work-card-narrow reveal" data-spotlight>
                     <div class="work-visual work-visual-c">
-                        <p class="work-metric"><strong>100s</strong><span>of entities, no frame drops</span></p>
+                        <p class="work-metric"><strong>DAG canvas</strong><span>multi-parent dialogue nodes</span></p>
                     </div>
                     <div class="work-body">
-                        <p class="work-kicker">CrazyGames <span aria-hidden="true">/</span> Solo</p>
-                        <h3 class="work-title">BloomWake</h3>
+                        <p class="work-kicker">Fullstack Engineer <span aria-hidden="true">/</span> 2026</p>
+                        <h3 class="work-title">BranchGPT Client</h3>
                         <p class="work-desc">
-                            A bounded-swarm survivor arena for the browser, held at frame budget
-                            through pooling and spatial partitioning.
+                            A web client that renders branched AI conversations as an interactive
+                            timeline, with swappable LLM backends.
                         </p>
                         <ul class="tag-row">
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">Canvas</li>
-                            <li class="tag">Spatial Partitioning</li>
-                            <li class="tag">Object Pooling</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">React</li>
+                            <li class="tag">React Flow</li>
                         </ul>
-                        <button class="work-link" type="button" data-project="bloomwake">
+                        <button class="work-link" type="button" data-project="branchgpt">
                             Show Details
                             <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
                         </button>
@@ -231,87 +231,80 @@
                 <!-- 4 -->
                 <article class="work-card work-card-wide reveal" data-spotlight>
                     <div class="work-visual work-visual-d">
-                        <p class="work-metric"><strong>Water physics</strong><span>buoyancy, drag and momentum</span></p>
-                        <p class="work-metric"><strong>Jet Boost</strong><span>mass-based acceleration</span></p>
+                        <p class="work-metric"><strong>Raspberry Pi 5</strong><span>always-on Linux node</span></p>
+                        <p class="work-metric"><strong>Zigbee + MQTT</strong><span>sensor mesh and pub/sub</span></p>
                     </div>
                     <div class="work-body">
-                        <p class="work-kicker">CrazyGames <span aria-hidden="true">/</span> Solo</p>
-                        <h3 class="work-title">AeroDrop</h3>
+                        <p class="work-kicker">Systems &amp; Embedded Developer <span aria-hidden="true">/</span> 2025 to 2026</p>
+                        <h3 class="work-title">Home Assistant IoT Automation</h3>
                         <p class="work-desc">
-                            A physics-based cell-growing game where movement cost scales with the
-                            mass you have absorbed.
+                            A continuously running Linux IoT controller wiring edge hardware into
+                            context-aware automations with local LLM output.
+                        </p>
+                        <ul class="tag-row">
+                            <li class="tag">Home Assistant OS</li>
+                            <li class="tag">MQTT</li>
+                            <li class="tag">Node-RED</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">Tailscale VPN</li>
+                        </ul>
+                        <button class="work-link" type="button" data-project="home-assistant">
+                            Show Details
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 5. Collection card. Two shipped titles under one heading, so it takes
+                     the full row and splits internally instead of using a visual panel. -->
+                <article class="work-card work-card-full work-card-collection reveal" data-spotlight>
+                    <div class="collection-intro">
+                        <p class="work-kicker">Solo Developer <span aria-hidden="true">/</span> Published on CrazyGames</p>
+                        <h3 class="work-title">CrazyGames Titles</h3>
+                        <p class="work-desc">
+                            Two browser games shipped end to end, both built around a strict frame
+                            budget: hundreds of live entities in one, integrated water physics in
+                            the other.
                         </p>
                         <ul class="tag-row">
                             <li class="tag">TypeScript</li>
+                            <li class="tag">JavaScript</li>
                             <li class="tag">Canvas</li>
                             <li class="tag">Vector Math</li>
-                            <li class="tag">Bot AI</li>
                         </ul>
-                        <button class="work-link" type="button" data-project="aerodrop">
-                            Show Details
-                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
-                        </button>
                     </div>
-                </article>
 
-                <!-- 5 -->
-                <article class="work-card work-card-half reveal" data-spotlight>
-                    <div class="work-visual work-visual-e">
-                        <p class="work-metric"><strong>Built from scratch</strong><span>renderer, assets and state machine</span></p>
-                    </div>
-                    <div class="work-body">
-                        <p class="work-kicker">PixiJS <span aria-hidden="true">/</span> Solo</p>
-                        <h3 class="work-title">Not Enough Mana</h3>
-                        <p class="work-desc">
-                            A turn-based card game with a modular rendering pipeline, custom asset
-                            management, and data-driven card definitions.
-                        </p>
-                        <ul class="tag-row">
-                            <li class="tag">PixiJS</li>
-                            <li class="tag">HTML5 Canvas</li>
-                            <li class="tag">State Machines</li>
-                        </ul>
-                        <button class="work-link" type="button" data-project="not-enough-mana">
-                            Show Details
-                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- 6 -->
-                <article class="work-card work-card-half reveal" data-spotlight>
-                    <!-- Screenshot slot. Drop a real 800x500 still here and the panel below
-                         is replaced by:
-                         <div class="work-visual work-visual-image">
-                           <img src="assets/img/zombie-survival.jpg" alt="..."
-                                width="800" height="500" loading="lazy" decoding="async">
-                         </div> -->
-                    <div class="work-visual work-visual-f">
-                        <p class="work-metric"><strong>Behavior Trees</strong><span>enemy AI and perception</span></p>
-                        <p class="work-metric"><strong>NavMesh</strong><span>spawn and aggro tuning</span></p>
-                    </div>
-                    <div class="work-body">
-                        <p class="work-kicker">Unreal Engine 5 <span aria-hidden="true">/</span> Solo</p>
-                        <h3 class="work-title">Zombie Survival</h3>
-                        <p class="work-desc">
-                            A co-op survival prototype with behavior-tree enemy AI, NavMesh
-                            navigation, and scalable combat and inventory systems.
-                        </p>
-                        <ul class="tag-row">
-                            <li class="tag">UE5</li>
-                            <li class="tag">Blueprints</li>
-                            <li class="tag">Behavior Trees</li>
-                            <li class="tag">EQS</li>
-                        </ul>
-                        <div class="work-link-row">
-                            <button class="work-link" type="button" data-project="zombie-survival">
+                    <div class="game-tile">
+                        <div class="game-tile-visual work-visual-e">
+                            <p class="work-metric"><strong>100s</strong><span>of entities, no frame drops</span></p>
+                        </div>
+                        <div class="game-tile-body">
+                            <h4 class="game-tile-title">BloomWake</h4>
+                            <p class="game-tile-desc">
+                                A bounded-swarm survivor arena held at budget through object pooling
+                                and spatial partitioning.
+                            </p>
+                            <button class="work-link" type="button" data-project="bloomwake">
                                 Show Details
                                 <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
                             </button>
-                            <a class="work-link work-link-alt" href="https://youtu.be/PsBm4uJqYyc" target="_blank" rel="noopener noreferrer">
-                                Watch Demo
-                                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7m0 0h-7m7 0v7"/></svg>
-                            </a>
+                        </div>
+                    </div>
+
+                    <div class="game-tile">
+                        <div class="game-tile-visual work-visual-f">
+                            <p class="work-metric"><strong>Water physics</strong><span>buoyancy, drag and momentum</span></p>
+                        </div>
+                        <div class="game-tile-body">
+                            <h4 class="game-tile-title">AeroDrop</h4>
+                            <p class="game-tile-desc">
+                                A cell-growing game where movement cost scales with the mass you
+                                have absorbed.
+                            </p>
+                            <button class="work-link" type="button" data-project="aerodrop">
+                                Show Details
+                                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -502,7 +495,7 @@
                 </div>
 
                 <div class="stack-panel" id="stack-panel" role="tabpanel" aria-labelledby="tab-all" tabindex="0">
-                    <p class="stack-count" id="stack-count" aria-live="polite">Showing all 40 technologies</p>
+                    <p class="stack-count" id="stack-count" aria-live="polite">Showing all 48 technologies</p>
 
                     <ul class="stack-cloud" id="stack-cloud">
                         <li class="stack-item" data-cat="systems">Unity</li>
@@ -519,6 +512,9 @@
                         <li class="stack-item" data-cat="systems">VR Interaction</li>
                         <li class="stack-item" data-cat="systems">ScriptableObject Composition</li>
                         <li class="stack-item" data-cat="systems">Performance Profiling</li>
+                        <li class="stack-item" data-cat="systems">MQTT</li>
+                        <li class="stack-item" data-cat="systems">Raspberry Pi</li>
+                        <li class="stack-item" data-cat="systems">Node-RED</li>
 
                         <li class="stack-item" data-cat="backend">Node.js</li>
                         <li class="stack-item" data-cat="backend">REST APIs</li>
@@ -541,12 +537,17 @@
                         <li class="stack-item" data-cat="devops">Git</li>
                         <li class="stack-item" data-cat="devops">Perforce</li>
                         <li class="stack-item" data-cat="devops">Jira &amp; Scrum</li>
+                        <li class="stack-item" data-cat="devops">Linux</li>
+                        <li class="stack-item" data-cat="devops">Tailscale VPN</li>
 
                         <li class="stack-item" data-cat="web">TypeScript</li>
                         <li class="stack-item" data-cat="web">JavaScript</li>
                         <li class="stack-item" data-cat="web">PixiJS</li>
                         <li class="stack-item" data-cat="web">HTML5 Canvas</li>
                         <li class="stack-item" data-cat="web">WebGL</li>
+                        <li class="stack-item" data-cat="web">React</li>
+                        <li class="stack-item" data-cat="web">React Flow</li>
+                        <li class="stack-item" data-cat="web">Next.js</li>
                         <li class="stack-item" data-cat="web">Figma</li>
                     </ul>
                 </div>

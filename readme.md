@@ -99,15 +99,26 @@ Tuning knobs, all in the `FRAG_SRC` array:
    `<button class="work-link" data-project="your-project-id">`.
 
 3. Give it a grid span so the row still sums to 6 columns. The grid is six columns wide and the
-   existing rhythm is `4+2`, `2+4`, `3+3`:
+   current rhythm is `4+2`, `2+4`, `6`:
 
 | Class | Span |
 | --- | --- |
+| `.work-card-full` | 6 |
 | `.work-card-wide` | 4 |
 | `.work-card-half` | 3 |
 | `.work-card-narrow` | 2 |
 
 A row that does not sum to 6 leaves a visible empty cell.
+
+### Grouping several titles under one card
+
+The CrazyGames card is a `.work-card-collection`: a full-width card that splits internally into an
+intro column plus one `.game-tile` per title, instead of using a `.work-visual` panel. Use it when
+several shipped pieces belong under a single heading. Each tile carries its own
+`data-project` button, so every title still gets its own modal entry in `PROJECTS`.
+
+At tablet width the intro spans the full row above a two-up tile row; on phones everything
+becomes one column.
 
 ### Project screenshots
 
@@ -122,8 +133,8 @@ Replace the `.work-visual` panel with:
 </div>
 ```
 
-`index.html` carries a commented slot on the Zombie Survival card showing exactly this.
-Recommended size 800x500. Screenshots will noticeably lift the grid.
+`index.html` carries a comment above `.work-grid` noting this. Recommended size 800x500.
+Screenshots will noticeably lift the grid.
 
 ## Local development
 
